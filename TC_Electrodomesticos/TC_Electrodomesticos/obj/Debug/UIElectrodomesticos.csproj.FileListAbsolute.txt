@@ -1,0 +1,16 @@
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\TC_Electrodomesticos.exe.config
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\TC_Electrodomesticos.exe
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\TC_Electrodomesticos.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\BLL.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\DAL.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\BLL.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\DAL.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectrodomesticos.csproj.AssemblyReference.cache
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Properties.Resources.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectrodomesticos.csproj.GenerateResource.cache
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectrodomesticos.csproj.CoreCompileInputs.cache
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectr.4C003709.Up2Date
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.exe
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Form1.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Register.resources
