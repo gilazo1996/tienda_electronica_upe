@@ -4,3 +4,6 @@ C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.cspro
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.dll
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\bin\Debug\BE.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\bin\Debug\BE.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.Up2Date

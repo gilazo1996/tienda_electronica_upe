@@ -8,8 +8,12 @@ using DAL;
 
 namespace DAL
 {
-    public class Permisos
-    {
+    public class Permisos //CLASE PERMISOS QUE CONTIENE MÉTODOS PARA VALIDACION DE ROLES Y PERMISOS EXISTENTES EN NUESTRA BASE
+    {                     // no todos los métodos son usados, pero fueron creados para su futuro uso, dichos métodos trabajan con consultas SQL y comparacion de credenciales entre tablas
+
+        private int _id;
+        private string _nombrePermiso;
+
         private static string connectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TC_Permisos;Data Source=localhost\\sqlexpress";
 
         public static bool TienePermiso(string permiso, int idUsuario)

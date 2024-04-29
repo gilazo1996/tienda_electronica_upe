@@ -11,7 +11,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class Conexion
+    public class Conexion //clase coenxion para conectarme a nuestra base de datos existente
     {
         private SqlConnection objConexion;
         private string strCadenaDeConexion = "";
@@ -51,7 +51,7 @@ namespace DAL
             //Instancio un objeto del tipo SqlCommand
             var objComando = new SqlCommand();
 
-            //Me conecto...
+            //me conecto...
             this.Conectar();
 
 
@@ -91,7 +91,7 @@ namespace DAL
             return unaTabla;
         }
 
-        public DataTable LeerPorComando(string pComando)
+        public DataTable LeerPorComando(string pComando, SqlParameter[] parametros = null)
         {
             //Instancio un objeto del tipo DataTable
             var unaTabla = new DataTable();
@@ -104,12 +104,15 @@ namespace DAL
 
             try
             {
-
-
                 //Parametrizo el objeto SqlCommand con sus valores respectivos
                 objComando.CommandType = CommandType.Text;
                 objComando.Connection = this.objConexion;
                 objComando.CommandText = pComando;
+
+                if (parametros != null)
+                {
+                    objComando.Parameters.AddRange(parametros);
+                }
 
                 //Instancio un adaptador con el parametro SqlCommand
                 var objAdaptador = new SqlDataAdapter(objComando);
@@ -134,7 +137,7 @@ namespace DAL
             return unaTabla;
         }
 
-        public int EscribirPorComando(string pTexto)
+        public int EscribirPorComando(string pTexto, SqlParameter[] parametros = null)
         {
             //Instanció una variable filasAfectadas que va a terminar devolviendo la cantidad de filas afectadas.
             int filasAfectadas = 0;
@@ -151,10 +154,13 @@ namespace DAL
                 objComando.CommandType = CommandType.Text;
                 objComando.Connection = this.objConexion;
 
+                if (parametros != null)
+                {
+                    objComando.Parameters.AddRange(parametros);
+                }
+
                 //El método ExecuteNonQuery() me devuelve la cantidad de filas afectadas.
                 filasAfectadas = objComando.ExecuteNonQuery();
-
-
             }
             catch (Exception)
             {
@@ -166,7 +172,6 @@ namespace DAL
                 //Me desconecto
                 this.Desconectar();
             }
-
 
             return filasAfectadas;
         }

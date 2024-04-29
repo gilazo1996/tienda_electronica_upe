@@ -7,3 +7,5 @@ C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\obj\Debug\BLL.pdb
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\bin\Debug\DAL.dll
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\bin\Debug\DAL.pdb
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\bin\Debug\BE.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BLL\bin\Debug\BE.pdb

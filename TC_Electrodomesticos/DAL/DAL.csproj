@@ -44,7 +44,13 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Permisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios.cs" />
+    <Compile Include="UsuarioDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{2c74e55c-e7ff-43cf-a377-1dbbe65361e4}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace TC_Electrodomesticos
 {
-    partial class Register
+    partial class FromRegistro
     {
         /// <summary>
         /// Required designer variable.
@@ -36,42 +36,43 @@
             this.registerPssw = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.registerText = new System.Windows.Forms.Label();
+            this.tboxNombreRegis = new System.Windows.Forms.TextBox();
+            this.registerNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tboxRegisterName
             // 
-            this.tboxRegisterName.Location = new System.Drawing.Point(244, 142);
+            this.tboxRegisterName.Location = new System.Drawing.Point(0, 0);
             this.tboxRegisterName.Name = "tboxRegisterName";
             this.tboxRegisterName.Size = new System.Drawing.Size(100, 20);
-            this.tboxRegisterName.TabIndex = 0;
+            this.tboxRegisterName.TabIndex = 9;
             // 
             // tboxRegisterMail
             // 
-            this.tboxRegisterMail.Location = new System.Drawing.Point(244, 180);
+            this.tboxRegisterMail.Location = new System.Drawing.Point(45, 130);
             this.tboxRegisterMail.Name = "tboxRegisterMail";
             this.tboxRegisterMail.Size = new System.Drawing.Size(100, 20);
             this.tboxRegisterMail.TabIndex = 1;
             // 
             // tboxRegisterPssw
             // 
-            this.tboxRegisterPssw.Location = new System.Drawing.Point(244, 219);
+            this.tboxRegisterPssw.Location = new System.Drawing.Point(45, 169);
             this.tboxRegisterPssw.Name = "tboxRegisterPssw";
             this.tboxRegisterPssw.Size = new System.Drawing.Size(100, 20);
             this.tboxRegisterPssw.TabIndex = 2;
             // 
             // registerUsername
             // 
-            this.registerUsername.AutoSize = true;
-            this.registerUsername.Location = new System.Drawing.Point(352, 149);
+            this.registerUsername.Location = new System.Drawing.Point(0, 0);
             this.registerUsername.Name = "registerUsername";
-            this.registerUsername.Size = new System.Drawing.Size(83, 13);
-            this.registerUsername.TabIndex = 3;
-            this.registerUsername.Text = "Nombre Usuario";
+            this.registerUsername.Size = new System.Drawing.Size(100, 23);
+            this.registerUsername.TabIndex = 8;
             // 
             // registerMail
             // 
             this.registerMail.AutoSize = true;
-            this.registerMail.Location = new System.Drawing.Point(352, 187);
+            this.registerMail.Location = new System.Drawing.Point(153, 137);
             this.registerMail.Name = "registerMail";
             this.registerMail.Size = new System.Drawing.Size(38, 13);
             this.registerMail.TabIndex = 4;
@@ -80,7 +81,7 @@
             // registerPssw
             // 
             this.registerPssw.AutoSize = true;
-            this.registerPssw.Location = new System.Drawing.Point(352, 226);
+            this.registerPssw.Location = new System.Drawing.Point(153, 176);
             this.registerPssw.Name = "registerPssw";
             this.registerPssw.Size = new System.Drawing.Size(61, 13);
             this.registerPssw.TabIndex = 5;
@@ -88,7 +89,7 @@
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(231, 285);
+            this.btnRegistrarse.Location = new System.Drawing.Point(32, 235);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrarse.TabIndex = 6;
@@ -98,7 +99,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(325, 285);
+            this.btnCancelar.Location = new System.Drawing.Point(126, 235);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -106,11 +107,41 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Register
+            // registerText
+            // 
+            this.registerText.AutoSize = true;
+            this.registerText.Location = new System.Drawing.Point(42, 42);
+            this.registerText.Name = "registerText";
+            this.registerText.Size = new System.Drawing.Size(133, 13);
+            this.registerText.TabIndex = 10;
+            this.registerText.Text = "REGISTRO DE USUARIO";
+            this.registerText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // tboxNombreRegis
+            // 
+            this.tboxNombreRegis.Location = new System.Drawing.Point(45, 97);
+            this.tboxNombreRegis.Name = "tboxNombreRegis";
+            this.tboxNombreRegis.Size = new System.Drawing.Size(100, 20);
+            this.tboxNombreRegis.TabIndex = 11;
+            this.tboxNombreRegis.TextChanged += new System.EventHandler(this.tboxNombreRegis_TextChanged);
+            // 
+            // registerNombre
+            // 
+            this.registerNombre.AutoSize = true;
+            this.registerNombre.Location = new System.Drawing.Point(152, 97);
+            this.registerNombre.Name = "registerNombre";
+            this.registerNombre.Size = new System.Drawing.Size(44, 13);
+            this.registerNombre.TabIndex = 12;
+            this.registerNombre.Text = "Nombre";
+            // 
+            // FromRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(247, 297);
+            this.Controls.Add(this.registerNombre);
+            this.Controls.Add(this.tboxNombreRegis);
+            this.Controls.Add(this.registerText);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.registerPssw);
@@ -119,8 +150,9 @@
             this.Controls.Add(this.tboxRegisterPssw);
             this.Controls.Add(this.tboxRegisterMail);
             this.Controls.Add(this.tboxRegisterName);
-            this.Name = "Register";
+            this.Name = "FromRegistro";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +168,8 @@
         private System.Windows.Forms.Label registerPssw;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label registerText;
+        private System.Windows.Forms.TextBox tboxNombreRegis;
+        private System.Windows.Forms.Label registerNombre;
     }
 }

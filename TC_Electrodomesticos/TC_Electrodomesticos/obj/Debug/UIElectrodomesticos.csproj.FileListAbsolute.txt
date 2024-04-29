@@ -12,5 +12,10 @@ C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\ob
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectr.4C003709.Up2Date
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.exe
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.pdb
-C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Form1.resources
-C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Register.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormularioAdministrador.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.InterfazMain.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FromRegistro.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\BE.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\bin\Debug\BE.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormComprarProducto.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormUsuario.resources

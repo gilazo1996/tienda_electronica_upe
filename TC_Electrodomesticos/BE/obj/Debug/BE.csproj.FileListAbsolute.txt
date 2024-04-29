@@ -1,0 +1,6 @@
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\bin\Debug\BE.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\bin\Debug\BE.pdb
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\obj\Debug\BE.dll
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\BE\obj\Debug\BE.pdb
