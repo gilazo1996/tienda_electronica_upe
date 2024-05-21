@@ -8,11 +8,17 @@ namespace BE
 {
     public class ProductoBE
     {
-        private string _descripcion;
-        private int _id;
-        private string _marcaProduct;
-        private double _precioUnitario;
-        private int _stock;
-        public DetalleVenta m_detalle_Venta;
+
+        public int IDproducto { get; set; }
+        public string NombreProducto { get; set; }
+        public string Descripcion { get; set; }
+        public string Categoria { get; set; }
+        public double Precio { get; set; }
+        public int Stock { get; set; }
+
+        public override string ToString()
+        {
+            return $"{NombreProducto} - {Categoria} - ${Precio}";
+        }
     }
 }

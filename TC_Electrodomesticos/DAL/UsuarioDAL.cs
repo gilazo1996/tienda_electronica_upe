@@ -13,7 +13,6 @@ namespace DAL
     public class UsuarioDAL
     {
 
-        private static string connectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TC_Permisos;Data Source=localhost\\sqlexpress";
         private Conexion objConexion = new Conexion(); // usamos la instancia de Conexion
 
         public bool RegistrarUsuario(string nombre, string email, string password)
@@ -58,7 +57,7 @@ namespace DAL
         {
             try
             {
-                    Conexion objConexion = new Conexion();  //el id del usuario lo recibo mediante el inicio de sesión, ya que lo gauarde en una variable static
+                    Conexion objConexion = new Conexion();  //el id del usuario lo recibo mediante el inicio de sesión, ya que lo tomo de la propiedad static
 
                     string sqlInsertCliente = "INSERT INTO clientes (nombre, cuil, id_usuario_creador) VALUES (@nombre, @CUIL, @id)";
                     SqlParameter[] parametrosInsertCliente = new SqlParameter[]//entonces inserto en nuestra tabla clientes los valores pedidos al usuario
@@ -79,13 +78,220 @@ namespace DAL
         }
 
 
+        public void CargarProductosDesdeBD(GestorStock gestorStock)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+                //consulta SQL que me trae todos los datos del producto, correspondiendo con el gestor de stock, proveedor y almacen que trajo el producto
+                //nota a futuro: eliminar campo clienteId
+                string sqlSelectProductos = @" 
+                               SELECT 
+                                p.id,
+                                p.nombre, 
+                                p.precio, 
+                                p.stockMinimo, 
+                                p.stockActual, 
+                                p.descripcion, 
+                                c.nombre AS nombreCategoria, 
+                                pr.nombre AS proveedorNombre, 
+                                a.nombre AS almacenNombre, 
+                                cl.nombre AS clienteNombre, 
+                                g.nombreGestor AS gestorStockNombre, 
+                                v.nombreVendedor AS vendedorNombre
+                            FROM 
+                                Producto p
+                            LEFT JOIN 
+                                Categoria_Producto c ON p.categoriaId = c.id
+                            LEFT JOIN 
+                                Proveedor pr ON p.proveedorId = pr.id
+                            LEFT JOIN 
+                                Almacen a ON p.almacenId = a.id
+                            LEFT JOIN 
+                                Clientes cl ON p.clienteId = cl.id
+                            LEFT JOIN 
+                                gestores_stock g ON p.gestorStockId = g.id
+                            LEFT JOIN 
+                                vendedores v ON p.vendedorId = v.id;";
 
-        public static int ObtenerIdRolUsuario()
+                DataTable dtProductos = objConexion.LeerPorComando(sqlSelectProductos);
+
+                gestorStock.ListaProductos.Clear();
+
+                foreach (DataRow row in dtProductos.Rows)
+                {
+                    ProductoBE producto = new ProductoBE
+                    {
+                        IDproducto = Convert.ToInt32(row["id"]),
+                        NombreProducto = row["nombre"].ToString(),
+                        Descripcion = row["descripcion"].ToString(),
+                        Categoria = row["nombreCategoria"].ToString(),
+                        Precio = Convert.ToDouble(row["precio"]),
+                        Stock = Convert.ToInt32(row["stockActual"])
+                    };
+
+                    gestorStock.ListaProductos.Add(producto);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al cargar productos desde la base de datos: " + ex.Message);
+                throw;
+            }
+        }
+
+        public bool RegistrarCompra(int idProducto, int idUsuario, decimal precioProducto)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // Obtener la fecha actual
+                DateTime fechaActual = DateTime.Now;
+
+                // Insertar el registro en la tabla de Factura
+                string sqlInsertFactura = @"
+                    INSERT INTO Factura (id_usuario, fecha_compra, total, id_producto_comprado)
+                    VALUES (@IdUsuario, @Fecha, @Total, @IdProducto)";
+
+                SqlParameter[] parametrosFactura = new SqlParameter[]
+                {
+                    new SqlParameter("@IdUsuario", idUsuario),
+                    new SqlParameter("@Fecha", fechaActual),
+                    new SqlParameter("@Total", precioProducto),
+                    new SqlParameter("@IdProducto", idProducto)
+                };
+
+                int filasAfectadasFactura = objConexion.EjecutarComando(sqlInsertFactura, parametrosFactura);
+
+                if (filasAfectadasFactura > 0)
+                {
+                    // Actualizar el stock del producto
+                    string sqlUpdateStock = @"UPDATE Producto SET stockActual = stockActual - 1 WHERE id = @IdProducto";
+                    SqlParameter[] parametrosUpdateStock = new SqlParameter[]
+                    {
+                new SqlParameter("@IdProducto", idProducto)
+                    };
+                    int filasAfectadasStock = objConexion.EjecutarComando(sqlUpdateStock, parametrosUpdateStock);
+
+                    return filasAfectadasStock > 0; // Retorna true si se actualizó el stock correctamente
+                }
+                else
+                {
+                    Console.WriteLine("Error al insertar en la tabla Factura.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar la compra: " + ex.Message);
+                throw;
+            }
+        }
+
+        public decimal ObtenerPrecioProducto(string nombreProductoCompleto)
+        {
+            decimal precioProducto = 0;
+
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // Separar el nombre del producto del resto de la cadena
+                string[] partesProducto = nombreProductoCompleto.Split(new string[] { " - " }, StringSplitOptions.None);
+                string nombreProducto = partesProducto[0]; // El nombre del producto estará en el primer campo
+
+                string sqlSelectPrecio = @"
+                    SELECT precio FROM Producto WHERE nombre = @NombreProducto";
+
+                SqlParameter[] parametros = new SqlParameter[]
+                {
+                    new SqlParameter("@NombreProducto", nombreProducto)
+                };
+
+                DataTable dtPrecio = objConexion.LeerPorComando(sqlSelectPrecio, parametros);
+
+                if (dtPrecio.Rows.Count > 0)
+                {
+                    precioProducto = Convert.ToDecimal(dtPrecio.Rows[0]["precio"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener el precio del producto: " + ex.Message);
+                throw;
+            }
+
+            return precioProducto;
+        }
+
+
+
+        // método para obtener el ID del producto por su nombre
+        public int ObtenerIdProductoPorNombre(string nombreProductoCompleto) //recibo el nombre del producto seleccionado
+        {
+            int idProducto = 0;
+
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // acá me fjo solo el nombre del producto eliminando el precio y la categoría
+                string[] partesProducto = nombreProductoCompleto.Split(new string[] { " - " }, StringSplitOptions.None);
+                //como el item seleccionado contiene la structura de {Nombre - Categoria - Precio} necesito separar estos campos
+                string nombreProducto = partesProducto[0]; // el nombre del producto estará en el primer campo
+
+                string sqlSelectProducto = @"
+                SELECT id FROM Producto WHERE nombre = @NombreProducto"; //traigo el id del producto con el mismo nombre
+
+                SqlParameter[] parametros = new SqlParameter[]
+                {
+                    new SqlParameter("@NombreProducto", nombreProducto)
+                };
+
+                DataTable dtProducto = objConexion.LeerPorComando(sqlSelectProducto, parametros); 
+
+                if (dtProducto.Rows.Count > 0)
+                {
+                    idProducto = Convert.ToInt32(dtProducto.Rows[0]["id"]);//convierto en entero el valor obtenido de la consulta
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener el ID del producto: " + ex.Message);
+                throw;
+            }
+             
+            return idProducto; //retorno el id para trabajarlo
+        }
+
+
+        public int ObtenerIdUsuarioPorEmail(string email) //mediante el mail obtengo el id del usuario correspondiente
+        {
+            string consulta = "SELECT id FROM usuarios WHERE email = @Email";
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                new SqlParameter("@Email", email)
+            };
+
+            DataTable dt = objConexion.LeerPorComando(consulta, parametros); //obtengo los resultados devueltos de LeerPorComanto en un datatable
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["id"]); //el valor retornado es el id, que fue convertido en un entero
+            }
+
+            return -1; // Cambiar el valor de retorno según tus necesidades
+        }
+
+        private static string connectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TC_Permisos;Data Source=localhost\\sqlexpress";
+
+        public static int ObtenerIdRolUsuario() //nota: modificar este método para usar la clae conexion.cs
         {
             string rolUsuario = "usuario"; //cadena usuario para trabajar con la consulta
             string sql = "SELECT id FROM roles WHERE nombre = @RolUsuario"; //consulta para obtener el id de la tabla roles donde el usuario coincida
 
-            using (SqlConnection connection = new SqlConnection(connectionString)) //instancio objeto SqlCommand para trabajar con la conexion a la bbdd
+            using (SqlConnection connection = new SqlConnection(connectionString)) //instancio objeto SqlCommand para trabajar con la conexion a la bbdd dentro del bloque using, para asegurarme de que los recursos se liberen correctamente después de su uso
             {
                 connection.Open();
                 SqlCommand sqlConsulta = new SqlCommand(sql, connection);
@@ -96,79 +302,5 @@ namespace DAL
             }
         }
 
-
-        public int ObtenerIdUsuarioPorEmail(string email) //mediante el mail obtengo el id del usuario correspondiente
-        {
-            string consulta = "SELECT id FROM usuarios WHERE email = @Email";
-            SqlParameter[] parametros = new SqlParameter[]
-            {
-        new SqlParameter("@Email", email)
-            };
-
-            DataTable dt = objConexion.LeerPorComando(consulta, parametros);
-
-            if (dt.Rows.Count > 0)
-            {
-                return Convert.ToInt32(dt.Rows[0]["id"]); //el valor retornado es el id, que fue convertido en un entero
-            }
-
-            return -1; // Cambiar el valor de retorno según tus necesidades
-        }
-
-       /* public List<string> ObtenerRoles(int idUsuario)
-        {
-            List<string> roles = new List<string>();
-            string consulta = "SELECT nombre FROM roles WHERE id IN (SELECT id_rol FROM roles_usuarios WHERE id_usuario = @IdUsuario)";
-            SqlParameter[] parametros = new SqlParameter[]
-            {
-            new SqlParameter("@IdUsuario", idUsuario)
-            };
-
-            DataTable dt = objConexion.LeerPorComando(consulta, parametros);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                roles.Add(row["nombre"].ToString());
-            }
-
-            return roles;
-        }*/
-
-        /*public int ObtenerIdRolPorNombre(string nombreRol)
-        {
-            string sql = "SELECT id FROM roles WHERE nombre = @NombreRol";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand sqlConsulta = new SqlCommand(sql, connection);
-                sqlConsulta.Parameters.AddWithValue("@NombreRol", nombreRol);
-
-                int idRol = Convert.ToInt32(sqlConsulta.ExecuteScalar());
-                return idRol;
-            }
-        }*/
-
-       /* public bool CambiarRol(int idUsuario, string nuevoRol)
-        {
-            try
-            {
-                string sqlActualizarRol = "UPDATE roles_usuarios SET id_rol = @IdRol WHERE id_usuario = @IdUsuario";
-                SqlParameter[] parametrosActualizarRol = new SqlParameter[]
-                {
-            new SqlParameter("@IdRol", ObtenerIdRolPorNombre(nuevoRol)),
-            new SqlParameter("@IdUsuario", idUsuario)
-                };
-
-                int filasAfectadas = objConexion.EscribirPorComando(sqlActualizarRol, parametrosActualizarRol);
-
-                return filasAfectadas > 0;
-            }
-            catch (Exception ex)
-            {
-                // Manejar la excepción según tus necesidades
-                throw ex;
-            }
-        }*/
     }
 }

@@ -18,6 +18,8 @@ namespace TC_Electrodomesticos
         public InterfazMain()
         {
             InitializeComponent();
+            tboxPassword.PasswordChar = '*';
+
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -25,7 +27,8 @@ namespace TC_Electrodomesticos
             string username = tboxUsername.Text;
             string password = tboxPassword.Text;
 
-            
+
+
             LoginUsuario login = new LoginUsuario();// creo una instancia de la clase Login
             UsuarioDAL usuarios = new UsuarioDAL();
             // invoco método de inicio de sesión de la clase Login
@@ -42,7 +45,7 @@ namespace TC_Electrodomesticos
                 if (permisosUsuario.Contains("administrador"))
                 {
                     MessageBox.Show("Inicio de Sesión exitoso. El usuario es administrador.");
-                    // Abrir la interfaz de administrador
+                    // abro la interfaz de administrador
                     FormularioAdministrador formularioAdmin = new FormularioAdministrador();
                     formularioAdmin.Show();
 
@@ -51,11 +54,13 @@ namespace TC_Electrodomesticos
                 }
                 if(permisosUsuario.Contains("usuario"))
                 {
-                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es un cliente.");
-                    FormUsuario formularioCliente = new FormUsuario();
-                    formularioCliente.Show();
+                    MessageBox.Show("Inicio de Sesión exitoso. Bienvenido!.");
+
+                    //abro interfaz de usuario
+                    FormUsuario formularioUsuario = new FormUsuario();
+                    formularioUsuario.Show();
                     // cierro el formulario de inicio de sesión
-                    this.Hide();
+                    //this.Hide();
                 }
             }
             else
@@ -89,6 +94,7 @@ namespace TC_Electrodomesticos
         {
             FormComprarProducto formComprarProducto = new FormComprarProducto(); //instancia del formulario para registarse
             formComprarProducto.ShowDialog(); //muestro el formulario como un modal//se supone que al comprar un producto, se le pid
+
 
         }
     }

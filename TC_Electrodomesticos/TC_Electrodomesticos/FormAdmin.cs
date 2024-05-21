@@ -26,5 +26,10 @@ namespace TC_Electrodomesticos
         {
             this.Close();
         }
+
+        private void FormularioAdministrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

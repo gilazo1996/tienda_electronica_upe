@@ -22,7 +22,7 @@ namespace DAL
          * base de datos (en este caso, SqlServer)
          * 
          */
-        private void Conectar()
+        public void Conectar()
         {   // HACK: Cadena de conexión hardcodeada. Luego ponerla como parametro de configuración del proyecto u otra alternativa.
             strCadenaDeConexion = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TC_Permisos;Data Source=localhost\sqlexpress";
 
@@ -135,6 +135,20 @@ namespace DAL
             }
 
             return unaTabla;
+        }
+
+        public int EjecutarComando(string comandoSql, SqlParameter[] parametros)
+        {
+            // Llamar al método Conectar para abrir la conexión
+            this.Conectar();
+
+            // Usar la conexión objConexion en lugar de crear una nueva conexión
+            using (SqlCommand comando = new SqlCommand(comandoSql, objConexion))
+            {
+                comando.Parameters.AddRange(parametros);
+                int filasAfectadas = comando.ExecuteNonQuery();
+                return filasAfectadas;
+            }
         }
 
         public int EscribirPorComando(string pTexto, SqlParameter[] parametros = null)

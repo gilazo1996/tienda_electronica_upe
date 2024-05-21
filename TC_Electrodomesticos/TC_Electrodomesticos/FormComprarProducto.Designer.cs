@@ -34,21 +34,22 @@
             this.textCUIL = new System.Windows.Forms.Label();
             this.btnComprarPro = new System.Windows.Forms.Button();
             this.btnCancelarPro = new System.Windows.Forms.Button();
-            this.cboxListaProductos = new System.Windows.Forms.ComboBox();
             this.labelListaProductos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVerProductos = new System.Windows.Forms.Button();
+            this.lboxMostrarProductos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tboxNombreCompleto
             // 
-            this.tboxNombreCompleto.Location = new System.Drawing.Point(41, 150);
+            this.tboxNombreCompleto.Location = new System.Drawing.Point(317, 280);
             this.tboxNombreCompleto.Name = "tboxNombreCompleto";
             this.tboxNombreCompleto.Size = new System.Drawing.Size(100, 20);
             this.tboxNombreCompleto.TabIndex = 0;
             // 
             // tboxCuil
             // 
-            this.tboxCuil.Location = new System.Drawing.Point(41, 193);
+            this.tboxCuil.Location = new System.Drawing.Point(317, 323);
             this.tboxCuil.Name = "tboxCuil";
             this.tboxCuil.Size = new System.Drawing.Size(100, 20);
             this.tboxCuil.TabIndex = 1;
@@ -56,17 +57,16 @@
             // textNombreCOmpleto
             // 
             this.textNombreCOmpleto.AutoSize = true;
-            this.textNombreCOmpleto.Location = new System.Drawing.Point(176, 153);
+            this.textNombreCOmpleto.Location = new System.Drawing.Point(452, 283);
             this.textNombreCOmpleto.Name = "textNombreCOmpleto";
             this.textNombreCOmpleto.Size = new System.Drawing.Size(91, 13);
             this.textNombreCOmpleto.TabIndex = 2;
             this.textNombreCOmpleto.Text = "Nombre Completo";
-            this.textNombreCOmpleto.Click += new System.EventHandler(this.textNombreCOmpleto_Click);
             // 
             // textCUIL
             // 
             this.textCUIL.AutoSize = true;
-            this.textCUIL.Location = new System.Drawing.Point(203, 200);
+            this.textCUIL.Location = new System.Drawing.Point(479, 330);
             this.textCUIL.Name = "textCUIL";
             this.textCUIL.Size = new System.Drawing.Size(31, 13);
             this.textCUIL.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             // btnComprarPro
             // 
-            this.btnComprarPro.Location = new System.Drawing.Point(12, 261);
+            this.btnComprarPro.Location = new System.Drawing.Point(288, 391);
             this.btnComprarPro.Name = "btnComprarPro";
             this.btnComprarPro.Size = new System.Drawing.Size(75, 23);
             this.btnComprarPro.TabIndex = 4;
@@ -84,26 +84,17 @@
             // 
             // btnCancelarPro
             // 
-            this.btnCancelarPro.Location = new System.Drawing.Point(225, 261);
+            this.btnCancelarPro.Location = new System.Drawing.Point(501, 391);
             this.btnCancelarPro.Name = "btnCancelarPro";
             this.btnCancelarPro.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarPro.TabIndex = 5;
             this.btnCancelarPro.Text = "Cancelar";
             this.btnCancelarPro.UseVisualStyleBackColor = true;
-            this.btnCancelarPro.Click += new System.EventHandler(this.btnCancelarPro_Click);
-            // 
-            // cboxListaProductos
-            // 
-            this.cboxListaProductos.FormattingEnabled = true;
-            this.cboxListaProductos.Location = new System.Drawing.Point(30, 90);
-            this.cboxListaProductos.Name = "cboxListaProductos";
-            this.cboxListaProductos.Size = new System.Drawing.Size(121, 21);
-            this.cboxListaProductos.TabIndex = 6;
             // 
             // labelListaProductos
             // 
             this.labelListaProductos.AutoSize = true;
-            this.labelListaProductos.Location = new System.Drawing.Point(158, 97);
+            this.labelListaProductos.Location = new System.Drawing.Point(650, 92);
             this.labelListaProductos.Name = "labelListaProductos";
             this.labelListaProductos.Size = new System.Drawing.Size(142, 13);
             this.labelListaProductos.TabIndex = 7;
@@ -118,14 +109,34 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "INTERFAZ COMPRAR PRODUCTO (REGISTRAR CLIENTE)";
             // 
+            // btnVerProductos
+            // 
+            this.btnVerProductos.Location = new System.Drawing.Point(668, 133);
+            this.btnVerProductos.Name = "btnVerProductos";
+            this.btnVerProductos.Size = new System.Drawing.Size(100, 23);
+            this.btnVerProductos.TabIndex = 9;
+            this.btnVerProductos.Text = "Ver Productos";
+            this.btnVerProductos.UseVisualStyleBackColor = true;
+            this.btnVerProductos.Click += new System.EventHandler(this.btnVerProductos_Click);
+            // 
+            // lboxMostrarProductos
+            // 
+            this.lboxMostrarProductos.FormattingEnabled = true;
+            this.lboxMostrarProductos.Location = new System.Drawing.Point(12, 55);
+            this.lboxMostrarProductos.Name = "lboxMostrarProductos";
+            this.lboxMostrarProductos.Size = new System.Drawing.Size(623, 173);
+            this.lboxMostrarProductos.TabIndex = 10;
+            this.lboxMostrarProductos.SelectedIndexChanged += new System.EventHandler(this.lboxMostrarProductos_SelectedIndexChanged);
+            // 
             // FormComprarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 319);
+            this.ClientSize = new System.Drawing.Size(917, 501);
+            this.Controls.Add(this.lboxMostrarProductos);
+            this.Controls.Add(this.btnVerProductos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelListaProductos);
-            this.Controls.Add(this.cboxListaProductos);
             this.Controls.Add(this.btnCancelarPro);
             this.Controls.Add(this.btnComprarPro);
             this.Controls.Add(this.textCUIL);
@@ -134,7 +145,6 @@
             this.Controls.Add(this.tboxNombreCompleto);
             this.Name = "FormComprarProducto";
             this.Text = "FormComprarProducto";
-            this.Load += new System.EventHandler(this.FormComprarProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,8 +158,9 @@
         private System.Windows.Forms.Label textCUIL;
         private System.Windows.Forms.Button btnComprarPro;
         private System.Windows.Forms.Button btnCancelarPro;
-        private System.Windows.Forms.ComboBox cboxListaProductos;
         private System.Windows.Forms.Label labelListaProductos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVerProductos;
+        private System.Windows.Forms.ListBox lboxMostrarProductos;
     }
 }

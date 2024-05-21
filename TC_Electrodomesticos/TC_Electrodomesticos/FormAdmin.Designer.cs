@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormularioAdministrador";
             this.Text = "FormAdmin";
+            this.Load += new System.EventHandler(this.FormularioAdministrador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

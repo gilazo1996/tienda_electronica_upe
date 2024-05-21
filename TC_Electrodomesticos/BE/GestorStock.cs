@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,14 @@ namespace BE
         private string _nombreGestor;
         private string _cuilGestor;
         private int _idUserCreator;
+        private List<ProductoBE> _listaProductos;
+
+        public GestorStock()
+        {
+            _listaProductos = new List<ProductoBE>();
+        }
+        public List<ProductoBE> ListaProductos { get; set; } = new List<ProductoBE>();
+
 
         public int IdUsuarioCreador
         {
@@ -29,5 +38,7 @@ namespace BE
             get { return _nombreGestor; }
             set { _nombreGestor = value; }
         }
+
+
     }
 }
