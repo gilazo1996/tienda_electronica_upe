@@ -53,9 +53,9 @@ namespace DAL
             }
         }
 
-        public static bool EliminarUsuario()
+        public static void EliminarUsuario(string emailUsuario )
         {
-            string emailUsuario = "email@ejemplo.com";
+            
             /*el estado por defecto de los usuarios es activo y lo elimino de forma
             logica cambiando el estado a inactivo*/
             string sql ="UPDATE usuarios SET estado = 'inactivo' WHERE email = @EmailUsuario";
@@ -67,6 +67,31 @@ namespace DAL
                 sqlConsulta.Parameters.AddWithValue("@Email", emailUsuario); //asigno al parametro obtenido el valor de la cadena rolUsuario
 
             }
+        }
+
+        //con este metodo veo los datos del usuario nombre,email y estado
+        public static void VisualizarUsuario(string emailUsuario)
+        {
+
+          string sqlSelectUsuario = "SELECT nombre,email,estado FROM usuarios WHERE email = @EmailUsuario";
+          string nombre;
+          string email;
+          string estado;
+          SqlParameter[] parametrosSelectUsuario = new SqlParameter[]
+            {
+              new SqlParameter("@EmailUsuario", emailUsuario)
+            };
+
+           DataTable dtUsuario = objConexion.LeerPorComando(sqlSelectUsuario, parametrosSelectUsuario);
+
+                if (dtUsuario.Rows.Count > 0)
+                {
+                    nombre = Convert.ToString(dtUsuario.Rows[0]["nombre"]);
+                    email = Convert.ToString(dtUsuario.Rows[1]["email"]);
+                    estado = Convert.ToString(dtUsuario.Rows[2]["estado"]);
+                }
+
+
         }
 
         public bool RegistrarCliente(string nombreCompleto, string CUIL, int id) //al momento de que un usuario compra un producto, se vuelve cliente
