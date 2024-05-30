@@ -53,6 +53,22 @@ namespace DAL
             }
         }
 
+        public static bool EliminarUsuario()
+        {
+            string emailUsuario = "email@ejemplo.com";
+            /*el estado por defecto de los usuarios es activo y lo elimino de forma
+            logica cambiando el estado a inactivo*/
+            string sql ="UPDATE usuarios SET estado = 'inactivo' WHERE email = @EmailUsuario";
+
+            using (SqlConnection connection = new SqlConnection(connectionString)) //instancio objeto SqlCommand para trabajar con la conexion a la bbdd dentro del bloque using, para asegurarme de que los recursos se liberen correctamente después de su uso
+            {
+                connection.Open();
+                SqlCommand sqlConsulta = new SqlCommand(sql, connection);
+                sqlConsulta.Parameters.AddWithValue("@Email", emailUsuario); //asigno al parametro obtenido el valor de la cadena rolUsuario
+
+            }
+        }
+
         public bool RegistrarCliente(string nombreCompleto, string CUIL, int id) //al momento de que un usuario compra un producto, se vuelve cliente
         {
             try
