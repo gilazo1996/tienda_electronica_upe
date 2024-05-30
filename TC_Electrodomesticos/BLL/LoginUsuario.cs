@@ -17,7 +17,7 @@ namespace BLL
          {
              Conexion objConexion = new Conexion();
 
-             string consulta = $"SELECT * FROM usuarios WHERE email = '{email}' AND password = '{password}'"; //tomando los valores que ingresé en los texbox, verifico que exista en la tabla
+             string consulta = $"SELECT * FROM usuarios WHERE email = '{email}' AND password = '{password}' AND estado = 'activo'"; //tomando los valores que ingresé en los texbox, verifico que exista en la tabla
              DataTable dt = objConexion.LeerPorComando(consulta); //invoco al metodo de la conexion q lee por comando
 
              if (dt.Rows.Count > 0) //verifico q se encuentre un usuario con los campos q obtuve
