@@ -7,3 +7,12 @@ C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.pdb
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\bin\Debug\BE.dll
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\bin\Debug\BE.pdb
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\bin\Debug\DAL.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\bin\Debug\DAL.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\bin\Debug\BE.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\bin\Debug\BE.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\obj\Debug\DAL.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\DAL\obj\Debug\DAL.pdb

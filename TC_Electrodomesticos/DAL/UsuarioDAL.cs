@@ -70,7 +70,8 @@ namespace DAL
         }
 
         //con este metodo veo los datos del usuario nombre,email y estado
-        public static void VisualizarUsuario(string emailUsuario)
+        //public static void VisualizarUsuario(string emailUsuario)
+        public void VisualizarUsuario(string emailUsuario)
         {
 
           string sqlSelectUsuario = "SELECT nombre,email,estado FROM usuarios WHERE email = @EmailUsuario";

@@ -1,0 +1,16 @@
+
+#AGREGAR ESTO EN LA BASE DE DATOS [30-05-24]:
+	insert into usuarios(nombre,email,password)
+	values('matias gomez','gomez@gmail.com','hello40')
+----------------------------------------------------------------------------------
+#AGREGAR ESTO EN LA BASE DE DATOS [31-05-24]:
+	insert into usuarios(nombre,email,password)
+	values('Gaston','gaston_roa@live.com','12345')
+----------------------------------------------------------------------------------
+#CORRECCIONES [31-05-24]:
+	en el archivo de [UsuarioDAL.cs] me tiraba error el proyecto cuando el mismo
+	al compilar detectaba que la conexionSQL para visualizar un usuario no podia
+	tener de referencia una funcion estatica, solo le saque el [static] a la funcion
+	[VisualizarUsuario]. Luego de eso funciona sin problemas.
+
+	    
