@@ -1,0 +1,27 @@
+
+#AGREGAR ESTO EN LA BASE DE DATOS [30-05-24]:
+	insert into usuarios(nombre,email,password)
+	values('matias gomez','gomez@gmail.com','hello40')
+--------------------------------------------------------------------------------------------
+#AGREGAR ESTO EN LA BASE DE DATOS [31-05-24]:
+	insert into usuarios(nombre,email,password)
+	values('Gaston','gaston_roa@live.com','12345')
+--------------------------------------------------------------------------------------------
+#CORRECCIONES [31-05-24]:
+	en el archivo de [UsuarioDAL.cs] me tiraba error el proyecto cuando el mismo
+	al compilar detectaba que la conexionSQL para visualizar un usuario no podia
+	tener de referencia una funcion estatica, solo le saque el [static] a la funcion
+	[VisualizarUsuario]. Luego de eso funciona sin problemas.
+--------------------------------------------------------------------------------------------
+#CORRECCIONES [31-05-24]:
+	Ahi les paso la Base de Datos de [TC_Permisos [v3][31-05-24].sql] actualizada acorde 
+	a lo que estuvimos armando ahi en la reunion de videollamada, solo falta adaptar el 
+	proyecto al mismo y listo, acuerdense de leer lo que puse en discord.
+
+		Actualización BDD TC_Permisos [v3][31-05-24].sql
+		- Agregada la tabla de detalle_venta
+		- Borrado de tablas Almacen y Proveedor y sus referencias en Producto
+		- Borrado de tabla Vendedor y sus referencias en Roles
+--------------------------------------------------------------------------------------------
+#CORRECCIONES [*poner la fecha]:
+	    
