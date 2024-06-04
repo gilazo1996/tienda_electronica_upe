@@ -37,20 +37,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnUsuarioComprar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tboxUsername
             // 
-            this.tboxUsername.Location = new System.Drawing.Point(385, 58);
+            this.tboxUsername.Location = new System.Drawing.Point(385, 66);
             this.tboxUsername.Name = "tboxUsername";
             this.tboxUsername.Size = new System.Drawing.Size(100, 20);
             this.tboxUsername.TabIndex = 0;
             // 
             // tboxPassword
             // 
-            this.tboxPassword.Location = new System.Drawing.Point(385, 84);
+            this.tboxPassword.Location = new System.Drawing.Point(385, 92);
             this.tboxPassword.Name = "tboxPassword";
             this.tboxPassword.Size = new System.Drawing.Size(100, 20);
             this.tboxPassword.TabIndex = 1;
@@ -97,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(491, 65);
+            this.label2.Location = new System.Drawing.Point(491, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 6;
@@ -106,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(491, 87);
+            this.label3.Location = new System.Drawing.Point(491, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 7;
@@ -121,22 +120,11 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // btnUsuarioComprar
-            // 
-            this.btnUsuarioComprar.Location = new System.Drawing.Point(29, 343);
-            this.btnUsuarioComprar.Name = "btnUsuarioComprar";
-            this.btnUsuarioComprar.Size = new System.Drawing.Size(134, 23);
-            this.btnUsuarioComprar.TabIndex = 9;
-            this.btnUsuarioComprar.Text = "Comprar Producto";
-            this.btnUsuarioComprar.UseVisualStyleBackColor = true;
-            this.btnUsuarioComprar.Click += new System.EventHandler(this.btnUsuarioComprar_Click);
-            // 
             // InterfazMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 418);
-            this.Controls.Add(this.btnUsuarioComprar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelTitulo);
@@ -166,6 +154,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnUsuarioComprar;
     }
 }

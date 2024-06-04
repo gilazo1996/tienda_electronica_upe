@@ -62,6 +62,18 @@ namespace TC_Electrodomesticos
                     // cierro el formulario de inicio de sesión
                     //this.Hide();
                 }
+
+                //INICIO CODIGO ROA
+                if (permisosUsuario.Contains("gestorStock"))
+                {
+                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gestor de Stock.");
+
+                    //abro interfaz de usuario
+                    FormGestorStock formularioGestorStock = new FormGestorStock();
+                    formularioGestorStock.Show();
+                    // cierro el formulario de inicio de sesión
+                    //this.Hide();
+                }//FIN CODIGO ROA
             }
             else
             {

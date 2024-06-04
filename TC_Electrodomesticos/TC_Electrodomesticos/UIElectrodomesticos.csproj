@@ -52,6 +52,18 @@
     <Compile Include="FormComprarProducto.Designer.cs">
       <DependentUpon>FormComprarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormControlStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControlStock.Designer.cs">
+      <DependentUpon>FormControlStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestorStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestorStock.Designer.cs">
+      <DependentUpon>FormGestorStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </Compile>
     <EmbeddedResource Include="FormComprarProducto.resx">
       <DependentUpon>FormComprarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControlStock.resx">
+      <DependentUpon>FormControlStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestorStock.resx">
+      <DependentUpon>FormGestorStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerProductosForm.resx">
       <DependentUpon>VerProductosForm.cs</DependentUpon>

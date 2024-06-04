@@ -55,48 +55,56 @@ namespace TC_Electrodomesticos
 
         private void btnComprarPro_Click(object sender, EventArgs e)
         {
+            try
             {
-                string productoSeleccionado = lboxMostrarProductos.SelectedItem.ToString();
+                string productoSeleccionado = lboxMostrarProductos.SelectedItem?.ToString();
+
+                if (string.IsNullOrEmpty(productoSeleccionado))
+                {
+                    MessageBox.Show("Seleccione un producto para comprar.");
+                    return;
+                }
 
                 string nombre = tboxNombreCompleto.Text;
                 string cuil = tboxCuil.Text;
 
-                // acá tomamos el ID del usuario autenticado desde la propiedad estatica de UsuarioBE
+                // Tomamos el ID del usuario autenticado desde la propiedad estática de UsuarioBE
                 int idUsuario = UsuarioBE.IdUsuario;
 
-                if (idUsuario > 0) // verifico si hay un ID de usuario cargado, es decir, si el usuario se logeo
+                if (idUsuario > 0) // Verifico si hay un ID de usuario cargado, es decir, si el usuario se logueó
                 {
                     UsuarioDAL usuarioDAL = new UsuarioDAL();
 
                     // Obtener el ID del producto seleccionado utilizando ProductoDAL
-                    UsuarioDAL productoDAL = new UsuarioDAL();
+                    ProductoDAL productoDAL = new ProductoDAL();
                     int idProducto = productoDAL.ObtenerIdProductoPorNombre(productoSeleccionado);
 
-                    if (idProducto > 0) // verifico si se pudo obtener el ID del producto seleccionado
+                    if (idProducto > 0) // Verifico si se pudo obtener el ID del producto seleccionado
                     {
                         decimal precioProducto = productoDAL.ObtenerPrecioProducto(productoSeleccionado); // Función para obtener el precio del producto
 
-                        // Registrar la compra utilizando el ID del producto obtenido, el ID del cliente y el precio del producto
-                        bool registroCompraExitoso = usuarioDAL.RegistrarCompra(idProducto, idUsuario, precioProducto);
+                        // Registrar al cliente si no existe
+                        bool clienteYaExistente;
+                        bool registroClienteExitoso = usuarioDAL.RegistrarCliente(nombre, cuil, idUsuario, out clienteYaExistente);
 
-                        // Registrar al cliente si la compra se registró correctamente
-                        if (registroCompraExitoso)
+                        if (registroClienteExitoso)
                         {
-                            bool registroClienteExitoso = usuarioDAL.RegistrarCliente(nombre, cuil, idUsuario);
+                            // Registrar la compra utilizando el ID del producto obtenido, el ID del cliente y el precio del producto
+                            bool registroCompraExitoso = usuarioDAL.RegistrarCompra(idProducto, idUsuario, precioProducto);
 
-                            if (registroClienteExitoso)
+                            if (registroCompraExitoso)
                             {
-                                MessageBox.Show("Compra existosa. ¡Bienvenido, nuevo cliente!");
-                                this.Close(); // cierro el formulario después de la compra
+                                MessageBox.Show("Compra exitosa. " + (clienteYaExistente ? "¡Bienvenido de nuevo!" : "¡Bienvenido, nuevo cliente!"));
+                                this.Close(); // Cierro el formulario después de la compra
                             }
                             else
                             {
-                                MessageBox.Show("Error al registrar al cliente. Por favor, inténtalo nuevamente.");
+                                MessageBox.Show("Error al comprar el producto. Por favor, inténtalo nuevamente.");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Error al comprar el producto. Por favor, inténtalo nuevamente.");
+                            MessageBox.Show("Error al registrar al cliente. Por favor, inténtalo nuevamente.");
                         }
                     }
                     else
@@ -106,10 +114,15 @@ namespace TC_Electrodomesticos
                 }
                 else
                 {
-                    MessageBox.Show("Necesita registrarse y estar logeado para comprar.");
+                    MessageBox.Show("Necesita registrarse y estar logueado para comprar.");
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
         }
+
 
         private void lboxMostrarProductos_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -151,6 +151,21 @@ namespace DAL
             }
         }
 
+
+        public object LeerPorComandoScalar(string pComando, SqlParameter[] parametros)
+        {
+            object resultado;
+
+            using (SqlCommand comando = new SqlCommand(pComando, objConexion))
+            {
+                comando.Parameters.AddRange(parametros);
+                resultado = comando.ExecuteScalar();
+            }
+
+            return resultado;
+        }
+
+
         public int EscribirPorComando(string pTexto, SqlParameter[] parametros = null)
         {
             //Instanció una variable filasAfectadas que va a terminar devolviendo la cantidad de filas afectadas.

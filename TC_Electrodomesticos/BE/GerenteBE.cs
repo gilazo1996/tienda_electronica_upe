@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class VendedorBE:UsuarioBE
+    public class GerenteBE:UsuarioBE
     {
         private string _cuilVendedor;
         private int _Id;

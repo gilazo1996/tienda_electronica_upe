@@ -38,7 +38,5 @@ namespace BE
             get { return _nombreGestor; }
             set { _nombreGestor = value; }
         }
-
-
     }
 }

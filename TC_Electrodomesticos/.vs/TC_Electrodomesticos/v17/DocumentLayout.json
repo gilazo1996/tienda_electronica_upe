@@ -3,32 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\be\\gerentebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\gerentebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\be\\gestorstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\gestorstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\be\\administradorbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\administradorbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\be\\productobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\productobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\be\\usuariobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\usuariobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\be\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\be\\clientebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\clientebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\be\\rolbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\rolbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|solutionrelative:dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\dal\\productodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|solutionrelative:dal\\productodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FA93AA3-F737-4B94-8142-E2EAC9BCA64D}|BLL\\BLL.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\bll\\loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA93AA3-F737-4B94-8142-E2EAC9BCA64D}|BLL\\BLL.csproj|solutionrelative:bll\\loginusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|solutionrelative:dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\dal\\permisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA79E92-0858-4A51-AF3A-07E58974AE94}|DAL\\DAL.csproj|solutionrelative:dal\\permisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\formcontrolstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formcontrolstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\formgestorstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formgestorstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\fromregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\fromregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\verproductosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\verproductosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\formcomprarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D65ABA28-13D9-4C64-B7C4-CD447C30311F}|TC_Electrodomesticos\\UIElectrodomesticos.csproj|solutionrelative:tc_electrodomesticos\\interfazmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|c:\\users\\shiimy-woozie\\source\\repos\\tc_electrodomesticos\\be\\productobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}|BE\\BE.csproj|solutionrelative:be\\productobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +122,209 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RolBE.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\RolBE.cs",
+              "RelativeDocumentMoniker": "BE\\RolBE.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\RolBE.cs",
+              "RelativeToolTip": "BE\\RolBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:08:53.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BLL\\LoginUsuario.cs",
+              "RelativeDocumentMoniker": "BLL\\LoginUsuario.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BLL\\LoginUsuario.cs",
+              "RelativeToolTip": "BLL\\LoginUsuario.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:08:12.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Permisos.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\Permisos.cs",
+              "RelativeDocumentMoniker": "DAL\\Permisos.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\Permisos.cs",
+              "RelativeToolTip": "DAL\\Permisos.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:08:01.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GestorStock.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\GestorStock.cs",
+              "RelativeDocumentMoniker": "BE\\GestorStock.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\GestorStock.cs",
+              "RelativeToolTip": "BE\\GestorStock.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA9wCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:05:20.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\FormAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:04:50.317Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "VerProductosForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\VerProductosForm.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\VerProductosForm.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\VerProductosForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\VerProductosForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:04:44.978Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\Venta.cs",
+              "RelativeDocumentMoniker": "BE\\Venta.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\Venta.cs",
+              "RelativeToolTip": "BE\\Venta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:25:05.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClienteBE.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\ClienteBE.cs",
+              "RelativeDocumentMoniker": "BE\\ClienteBE.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\ClienteBE.cs",
+              "RelativeToolTip": "BE\\ClienteBE.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:25:00.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductoDAL.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\ProductoDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ProductoDAL.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\ProductoDAL.cs",
+              "RelativeToolTip": "DAL\\ProductoDAL.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAcwFwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:22:55.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormControlStock.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormControlStock.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormControlStock.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormControlStock.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\FormControlStock.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:21:39.717Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormGestorStock.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormGestorStock.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormGestorStock.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormGestorStock.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\FormGestorStock.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:21:39.126Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormUsuario.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormUsuario.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\FormUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:21:38.432Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FromRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FromRegistro.cs",
+              "RelativeDocumentMoniker": "TC_Electrodomesticos\\FromRegistro.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FromRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TC_Electrodomesticos\\FromRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T17:21:37.094Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioBE.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\UsuarioBE.cs",
+              "RelativeDocumentMoniker": "BE\\UsuarioBE.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\UsuarioBE.cs",
+              "RelativeToolTip": "BE\\UsuarioBE.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:52:45.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GerenteBE.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\GerenteBE.cs",
+              "RelativeDocumentMoniker": "BE\\GerenteBE.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\GerenteBE.cs",
+              "RelativeToolTip": "BE\\GerenteBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:44:52.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdministradorBE.cs",
+              "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\AdministradorBE.cs",
+              "RelativeDocumentMoniker": "BE\\AdministradorBE.cs",
+              "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\AdministradorBE.cs",
+              "RelativeToolTip": "BE\\AdministradorBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:44:49.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "FormComprarProducto.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormComprarProducto.cs",
               "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormComprarProducto.cs",
@@ -70,20 +336,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\Conexion.cs",
               "RelativeDocumentMoniker": "DAL\\Conexion.cs",
               "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\Conexion.cs",
               "RelativeToolTip": "DAL\\Conexion.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAIwJQAAAAQAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAiwJ8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T20:06:34.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 22,
               "Title": "InterfazMain.cs",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\InterfazMain.cs",
               "RelativeDocumentMoniker": "TC_Electrodomesticos\\InterfazMain.cs",
@@ -96,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "InterfazMain.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\InterfazMain.cs",
               "RelativeDocumentMoniker": "TC_Electrodomesticos\\InterfazMain.cs",
@@ -108,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ProductoBE.cs",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\BE\\ProductoBE.cs",
               "RelativeDocumentMoniker": "BE\\ProductoBE.cs",
@@ -121,26 +387,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 21,
               "Title": "FormComprarProducto.cs",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormComprarProducto.cs",
               "RelativeDocumentMoniker": "TC_Electrodomesticos\\FormComprarProducto.cs",
               "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\TC_Electrodomesticos\\FormComprarProducto.cs",
               "RelativeToolTip": "TC_Electrodomesticos\\FormComprarProducto.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAE8AAAB3AAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwHQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T19:42:37.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "UsuarioDAL.cs",
               "DocumentMoniker": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\UsuarioDAL.cs",
               "RelativeDocumentMoniker": "DAL\\UsuarioDAL.cs",
               "ToolTip": "C:\\Users\\Shiimy-Woozie\\source\\repos\\TC_Electrodomesticos\\DAL\\UsuarioDAL.cs",
               "RelativeToolTip": "DAL\\UsuarioDAL.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAQwEoAAAANAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAYwBcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T19:42:34.2Z",
               "EditorCaption": ""

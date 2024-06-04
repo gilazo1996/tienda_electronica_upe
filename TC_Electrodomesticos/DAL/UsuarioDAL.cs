@@ -53,90 +53,86 @@ namespace DAL
             }
         }
 
-        public bool RegistrarCliente(string nombreCompleto, string CUIL, int id) //al momento de que un usuario compra un producto, se vuelve cliente
+        public static void EliminarUsuario(string emailUsuario )
         {
-            try
+            
+            /*el estado por defecto de los usuarios es activo y lo elimino de forma
+            logica cambiando el estado a inactivo*/
+            string sql ="UPDATE usuarios SET estado = 'inactivo' WHERE email = @EmailUsuario";
+
+            using (SqlConnection connection = new SqlConnection(connectionString)) //instancio objeto SqlCommand para trabajar con la conexion a la bbdd dentro del bloque using, para asegurarme de que los recursos se liberen correctamente después de su uso
             {
-                    Conexion objConexion = new Conexion();  //el id del usuario lo recibo mediante el inicio de sesión, ya que lo tomo de la propiedad static
+                connection.Open();
+                SqlCommand sqlConsulta = new SqlCommand(sql, connection);
+                sqlConsulta.Parameters.AddWithValue("@Email", emailUsuario); //asigno al parametro obtenido el valor de la cadena rolUsuario
 
-                    string sqlInsertCliente = "INSERT INTO clientes (nombre, cuil, id_usuario_creador) VALUES (@nombre, @CUIL, @id)";
-                    SqlParameter[] parametrosInsertCliente = new SqlParameter[]//entonces inserto en nuestra tabla clientes los valores pedidos al usuario
-                    {
-                        new SqlParameter("@nombre", nombreCompleto),
-                        new SqlParameter("@CUIL", CUIL),
-                        new SqlParameter("@id", id),
-                    };
-
-                    int filasAfectadasCliente = objConexion.EscribirPorComando(sqlInsertCliente, parametrosInsertCliente);
-
-                    return filasAfectadasCliente > 0;
-                }
-            catch (Exception ex)
-            {
-                    throw ex;
             }
         }
 
-
-        public void CargarProductosDesdeBD(GestorStock gestorStock)
+        //con este metodo veo los datos del usuario nombre,email y estado
+        //public static void VisualizarUsuario(string emailUsuario)
+        public void VisualizarUsuario(string emailUsuario)
         {
+
+          string sqlSelectUsuario = "SELECT nombre,email,estado FROM usuarios WHERE email = @EmailUsuario";
+          string nombre;
+          string email;
+          string estado;
+          SqlParameter[] parametrosSelectUsuario = new SqlParameter[]
+            {
+              new SqlParameter("@EmailUsuario", emailUsuario)
+            };
+
+           DataTable dtUsuario = objConexion.LeerPorComando(sqlSelectUsuario, parametrosSelectUsuario);
+
+                if (dtUsuario.Rows.Count > 0)
+                {
+                    nombre = Convert.ToString(dtUsuario.Rows[0]["nombre"]);
+                    email = Convert.ToString(dtUsuario.Rows[1]["email"]);
+                    estado = Convert.ToString(dtUsuario.Rows[2]["estado"]);
+                }
+        }
+
+        public bool RegistrarCliente(string nombreCompleto, string CUIL, int id, out bool clienteYaExistente)
+        {
+            clienteYaExistente = false;
             try
             {
-                Conexion objConexion = new Conexion();
-                //consulta SQL que me trae todos los datos del producto, correspondiendo con el gestor de stock, proveedor y almacen que trajo el producto
-                //nota a futuro: eliminar campo clienteId
-                string sqlSelectProductos = @" 
-                               SELECT 
-                                p.id,
-                                p.nombre, 
-                                p.precio, 
-                                p.stockMinimo, 
-                                p.stockActual, 
-                                p.descripcion, 
-                                c.nombre AS nombreCategoria, 
-                                pr.nombre AS proveedorNombre, 
-                                a.nombre AS almacenNombre, 
-                                cl.nombre AS clienteNombre, 
-                                g.nombreGestor AS gestorStockNombre, 
-                                v.nombreVendedor AS vendedorNombre
-                            FROM 
-                                Producto p
-                            LEFT JOIN 
-                                Categoria_Producto c ON p.categoriaId = c.id
-                            LEFT JOIN 
-                                Proveedor pr ON p.proveedorId = pr.id
-                            LEFT JOIN 
-                                Almacen a ON p.almacenId = a.id
-                            LEFT JOIN 
-                                Clientes cl ON p.clienteId = cl.id
-                            LEFT JOIN 
-                                gestores_stock g ON p.gestorStockId = g.id
-                            LEFT JOIN 
-                                vendedores v ON p.vendedorId = v.id;";
+                Conexion objConexion = new Conexion(); // El id del usuario lo recibo mediante el inicio de sesión, ya que lo tomo de la propiedad estática
+                objConexion.Conectar(); // Asegurarse de abrir la conexión antes de usarla
 
-                DataTable dtProductos = objConexion.LeerPorComando(sqlSelectProductos);
-
-                gestorStock.ListaProductos.Clear();
-
-                foreach (DataRow row in dtProductos.Rows)
+                // Verificar si el cliente ya existe
+                string sqlVerificarCliente = "SELECT COUNT(*) FROM clientes WHERE id_usuario_creador = @id";
+                SqlParameter[] parametrosVerificarCliente = new SqlParameter[]
                 {
-                    ProductoBE producto = new ProductoBE
-                    {
-                        IDproducto = Convert.ToInt32(row["id"]),
-                        NombreProducto = row["nombre"].ToString(),
-                        Descripcion = row["descripcion"].ToString(),
-                        Categoria = row["nombreCategoria"].ToString(),
-                        Precio = Convert.ToDouble(row["precio"]),
-                        Stock = Convert.ToInt32(row["stockActual"])
-                    };
+                     new SqlParameter("@id", id)
+                };
 
-                    gestorStock.ListaProductos.Add(producto);
+                int clienteExiste = Convert.ToInt32(objConexion.LeerPorComandoScalar(sqlVerificarCliente, parametrosVerificarCliente));
+
+                if (clienteExiste > 0)
+                {
+                    // El cliente ya existe, no realizar la inserción
+                    clienteYaExistente = true;
+                    return true; // Retornamos true ya que, desde la perspectiva del método, la operación fue exitosa
                 }
+
+                // Insertar nuevo cliente
+                string sqlInsertCliente = "INSERT INTO clientes (nombre, cuil, id_usuario_creador) VALUES (@nombre, @CUIL, @id)";
+                SqlParameter[] parametrosInsertCliente = new SqlParameter[]
+                {
+                    new SqlParameter("@nombre", nombreCompleto),
+                    new SqlParameter("@CUIL", CUIL),
+                    new SqlParameter("@id", id),
+                };
+
+                int filasAfectadasCliente = objConexion.EscribirPorComando(sqlInsertCliente, parametrosInsertCliente);
+
+                return filasAfectadasCliente > 0;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al cargar productos desde la base de datos: " + ex.Message);
-                throw;
+                throw ex;
             }
         }
 
@@ -189,81 +185,7 @@ namespace DAL
             }
         }
 
-        public decimal ObtenerPrecioProducto(string nombreProductoCompleto)
-        {
-            decimal precioProducto = 0;
-
-            try
-            {
-                Conexion objConexion = new Conexion();
-
-                // Separar el nombre del producto del resto de la cadena
-                string[] partesProducto = nombreProductoCompleto.Split(new string[] { " - " }, StringSplitOptions.None);
-                string nombreProducto = partesProducto[0]; // El nombre del producto estará en el primer campo
-
-                string sqlSelectPrecio = @"
-                    SELECT precio FROM Producto WHERE nombre = @NombreProducto";
-
-                SqlParameter[] parametros = new SqlParameter[]
-                {
-                    new SqlParameter("@NombreProducto", nombreProducto)
-                };
-
-                DataTable dtPrecio = objConexion.LeerPorComando(sqlSelectPrecio, parametros);
-
-                if (dtPrecio.Rows.Count > 0)
-                {
-                    precioProducto = Convert.ToDecimal(dtPrecio.Rows[0]["precio"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener el precio del producto: " + ex.Message);
-                throw;
-            }
-
-            return precioProducto;
-        }
-
-
-
-        // método para obtener el ID del producto por su nombre
-        public int ObtenerIdProductoPorNombre(string nombreProductoCompleto) //recibo el nombre del producto seleccionado
-        {
-            int idProducto = 0;
-
-            try
-            {
-                Conexion objConexion = new Conexion();
-
-                // acá me fjo solo el nombre del producto eliminando el precio y la categoría
-                string[] partesProducto = nombreProductoCompleto.Split(new string[] { " - " }, StringSplitOptions.None);
-                //como el item seleccionado contiene la structura de {Nombre - Categoria - Precio} necesito separar estos campos
-                string nombreProducto = partesProducto[0]; // el nombre del producto estará en el primer campo
-
-                string sqlSelectProducto = @"
-                SELECT id FROM Producto WHERE nombre = @NombreProducto"; //traigo el id del producto con el mismo nombre
-
-                SqlParameter[] parametros = new SqlParameter[]
-                {
-                    new SqlParameter("@NombreProducto", nombreProducto)
-                };
-
-                DataTable dtProducto = objConexion.LeerPorComando(sqlSelectProducto, parametros); 
-
-                if (dtProducto.Rows.Count > 0)
-                {
-                    idProducto = Convert.ToInt32(dtProducto.Rows[0]["id"]);//convierto en entero el valor obtenido de la consulta
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener el ID del producto: " + ex.Message);
-                throw;
-            }
-             
-            return idProducto; //retorno el id para trabajarlo
-        }
+  
 
 
         public int ObtenerIdUsuarioPorEmail(string email) //mediante el mail obtengo el id del usuario correspondiente
