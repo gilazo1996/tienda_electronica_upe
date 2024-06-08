@@ -46,3 +46,5 @@ C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_e
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormControlStock.resources
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormControlStock.resources
 C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormGestorStock.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Admin_BuscarUserForm.resources
+C:\Users\Shiimy-Woozie\source\repos\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.Admin_CrearUsuario.resources

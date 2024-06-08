@@ -94,7 +94,7 @@
             // labelListaProductos
             // 
             this.labelListaProductos.AutoSize = true;
-            this.labelListaProductos.Location = new System.Drawing.Point(650, 92);
+            this.labelListaProductos.Location = new System.Drawing.Point(689, 64);
             this.labelListaProductos.Name = "labelListaProductos";
             this.labelListaProductos.Size = new System.Drawing.Size(142, 13);
             this.labelListaProductos.TabIndex = 7;
@@ -145,6 +145,7 @@
             this.Controls.Add(this.tboxNombreCompleto);
             this.Name = "FormComprarProducto";
             this.Text = "FormComprarProducto";
+            this.Load += new System.EventHandler(this.FormComprarProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BE
 {
-    public class AdministradorBE:UsuarioBE
+    public class AdministradorBE : UsuarioBE
     {
-        private int _idUsuarioCreador;
         private string _nombreAdmin;
         private string _cuilAdmin;
 
@@ -22,12 +22,6 @@ namespace BE
         {
             get { return _nombreAdmin; }
             set { _nombreAdmin = value; }
-        }
-
-        public int IdUsuarioCreador
-        {
-            get { return _idUsuarioCreador; }
-            set { _idUsuarioCreador = value; }
         }
     }
 }

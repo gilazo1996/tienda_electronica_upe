@@ -30,7 +30,7 @@ namespace TC_Electrodomesticos
 
 
             LoginUsuario login = new LoginUsuario();// creo una instancia de la clase Login
-            UsuarioDAL usuarios = new UsuarioDAL();
+            UsuarioBLL usuarios = new UsuarioBLL();
             // invoco método de inicio de sesión de la clase Login
             bool loginSuccessful = login.IniciarSesion(username, password);
 
@@ -47,10 +47,10 @@ namespace TC_Electrodomesticos
                     MessageBox.Show("Inicio de Sesión exitoso. El usuario es administrador.");
                     // abro la interfaz de administrador
                     FormularioAdministrador formularioAdmin = new FormularioAdministrador();
-                    formularioAdmin.Show();
+                    formularioAdmin.ShowDialog();
 
                     // cierro el formulario de inicio de sesión
-                    this.Hide();
+                    //this.Hide();
                 }
                 if(permisosUsuario.Contains("usuario"))
                 {
@@ -58,7 +58,7 @@ namespace TC_Electrodomesticos
 
                     //abro interfaz de usuario
                     FormUsuario formularioUsuario = new FormUsuario();
-                    formularioUsuario.Show();
+                    formularioUsuario.ShowDialog();
                     // cierro el formulario de inicio de sesión
                     //this.Hide();
                 }
@@ -70,7 +70,7 @@ namespace TC_Electrodomesticos
 
                     //abro interfaz de usuario
                     FormGestorStock formularioGestorStock = new FormGestorStock();
-                    formularioGestorStock.Show();
+                    formularioGestorStock.ShowDialog();
                     // cierro el formulario de inicio de sesión
                     //this.Hide();
                 }//FIN CODIGO ROA
@@ -97,16 +97,16 @@ namespace TC_Electrodomesticos
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUsuarioComprar_Click(object sender, EventArgs e)
         {
             FormComprarProducto formComprarProducto = new FormComprarProducto(); //instancia del formulario para registarse
             formComprarProducto.ShowDialog(); //muestro el formulario como un modal//se supone que al comprar un producto, se le pid
 
+
+        }
+
+        private void InterfazMain_Load(object sender, EventArgs e)
+        {
 
         }
     }

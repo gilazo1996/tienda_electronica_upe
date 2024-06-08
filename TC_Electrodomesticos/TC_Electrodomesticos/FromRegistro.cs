@@ -16,24 +16,33 @@ namespace TC_Electrodomesticos
         public FromRegistro()
         {
             InitializeComponent();
+            tboxRegisterPssw.PasswordChar = '*';
+
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             string nombre = tboxNombreRegis.Text;
             string email = tboxRegisterMail.Text;
-            string password = tboxRegisterPssw.Text;
-            UsuarioDAL usuarioDAL = new UsuarioDAL();
-            bool registroExitoso = usuarioDAL.RegistrarUsuario(nombre, email, password);
+            string password = tboxRegisterPssw.Text; 
+            try
+            {
+                UsuarioDAL usuarioDAL = new UsuarioDAL();
+                bool registroExitoso = usuarioDAL.RegistrarUsuario(nombre, email, password);
 
-            if (registroExitoso)
+                if (registroExitoso)
+                {
+                    MessageBox.Show("Registro exitoso. ¡Bienvenido!");
+                    this.Close(); // cierro el formulario de registro después de un registro exitoso
+                }
+                else
+                {
+                    MessageBox.Show("Error al registrar el usuario. Por favor, inténtalo nuevamente.");
+                }
+
+            }catch (Exception ex)
             {
-                MessageBox.Show("Registro exitoso. ¡Bienvenido!");
-                this.Close(); // cierro el formulario de registro después de un registro exitoso
-            }
-            else
-            {
-                MessageBox.Show("Error al registrar el usuario. Por favor, inténtalo nuevamente.");
+                MessageBox.Show("Error al registrar: " + ex.Message);
             }
         }
 
@@ -42,14 +51,5 @@ namespace TC_Electrodomesticos
             this.Close();   
         }
 
-        private void Register_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tboxNombreRegis_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

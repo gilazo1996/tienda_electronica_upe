@@ -123,7 +123,6 @@
             this.tboxNombreRegis.Name = "tboxNombreRegis";
             this.tboxNombreRegis.Size = new System.Drawing.Size(100, 20);
             this.tboxNombreRegis.TabIndex = 11;
-            this.tboxNombreRegis.TextChanged += new System.EventHandler(this.tboxNombreRegis_TextChanged);
             // 
             // registerNombre
             // 
@@ -152,7 +151,6 @@
             this.Controls.Add(this.tboxRegisterName);
             this.Name = "FromRegistro";
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,11 +14,17 @@ namespace DAL
     {
 
         private Conexion objConexion = new Conexion(); // usamos la instancia de Conexion
-
+        AdministradorDAL verificarExiste = new AdministradorDAL();
         public bool RegistrarUsuario(string nombre, string email, string password)
         {
             try
             {
+
+                if (verificarExiste.UsuarioExiste(email))
+                {
+                    throw new Exception("El usuario ya existe.");
+                }
+
                 string sqlInsertUsuario = "INSERT INTO usuarios (nombre, email, password) VALUES (@Nombre, @Email, @Password)";
                 SqlParameter[] parametrosInsertUsuario = new SqlParameter[]
                 {
@@ -51,46 +57,6 @@ namespace DAL
             {
                 throw ex;
             }
-        }
-
-        public static void EliminarUsuario(string emailUsuario )
-        {
-            
-            /*el estado por defecto de los usuarios es activo y lo elimino de forma
-            logica cambiando el estado a inactivo*/
-            string sql ="UPDATE usuarios SET estado = 'inactivo' WHERE email = @EmailUsuario";
-
-            using (SqlConnection connection = new SqlConnection(connectionString)) //instancio objeto SqlCommand para trabajar con la conexion a la bbdd dentro del bloque using, para asegurarme de que los recursos se liberen correctamente después de su uso
-            {
-                connection.Open();
-                SqlCommand sqlConsulta = new SqlCommand(sql, connection);
-                sqlConsulta.Parameters.AddWithValue("@Email", emailUsuario); //asigno al parametro obtenido el valor de la cadena rolUsuario
-
-            }
-        }
-
-        //con este metodo veo los datos del usuario nombre,email y estado
-        //public static void VisualizarUsuario(string emailUsuario)
-        public void VisualizarUsuario(string emailUsuario)
-        {
-
-          string sqlSelectUsuario = "SELECT nombre,email,estado FROM usuarios WHERE email = @EmailUsuario";
-          string nombre;
-          string email;
-          string estado;
-          SqlParameter[] parametrosSelectUsuario = new SqlParameter[]
-            {
-              new SqlParameter("@EmailUsuario", emailUsuario)
-            };
-
-           DataTable dtUsuario = objConexion.LeerPorComando(sqlSelectUsuario, parametrosSelectUsuario);
-
-                if (dtUsuario.Rows.Count > 0)
-                {
-                    nombre = Convert.ToString(dtUsuario.Rows[0]["nombre"]);
-                    email = Convert.ToString(dtUsuario.Rows[1]["email"]);
-                    estado = Convert.ToString(dtUsuario.Rows[2]["estado"]);
-                }
         }
 
         public bool RegistrarCliente(string nombreCompleto, string CUIL, int id, out bool clienteYaExistente)
@@ -185,9 +151,6 @@ namespace DAL
             }
         }
 
-  
-
-
         public int ObtenerIdUsuarioPorEmail(string email) //mediante el mail obtengo el id del usuario correspondiente
         {
             string consulta = "SELECT id FROM usuarios WHERE email = @Email";
@@ -223,6 +186,7 @@ namespace DAL
                 return idRolUsuario; //retorno el id que obtuve una vez q lo convertí en entero
             }
         }
+
 
     }
 }

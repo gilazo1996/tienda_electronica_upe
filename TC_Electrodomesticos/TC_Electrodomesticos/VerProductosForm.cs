@@ -22,7 +22,7 @@ namespace TC_Electrodomesticos
         private void FormGrilla_Load(object sender, EventArgs e)
         {
             GestorStock gestorStock = new GestorStock();
-            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            ProductoDAL usuarioDAL = new ProductoDAL();
             usuarioDAL.CargarProductosDesdeBD(gestorStock); // Cargar los productos en la instancia de GestorStock
 
             List<ProductoBE> listaProductos = gestorStock.ListaProductos; // Obtener la lista de productos

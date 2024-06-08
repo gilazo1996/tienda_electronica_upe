@@ -51,6 +51,7 @@
             this.dgvDatosStock.Name = "dgvDatosStock";
             this.dgvDatosStock.Size = new System.Drawing.Size(215, 298);
             this.dgvDatosStock.TabIndex = 0;
+            this.dgvDatosStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosStock_CellContentClick);
             this.dgvDatosStock.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDatosStock_CellFormatting);
             // 
             // btnAtras

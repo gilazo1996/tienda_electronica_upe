@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_BuscarUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_BuscarUserForm.Designer.cs">
+      <DependentUpon>Admin_BuscarUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_CrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_CrearUsuario.Designer.cs">
+      <DependentUpon>Admin_CrearUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormComprarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     <Compile Include="FromRegistro.Designer.cs">
       <DependentUpon>FromRegistro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin_BuscarUserForm.resx">
+      <DependentUpon>Admin_BuscarUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_CrearUsuario.resx">
+      <DependentUpon>Admin_CrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormComprarProducto.resx">
       <DependentUpon>FormComprarProducto.cs</DependentUpon>
     </EmbeddedResource>

@@ -22,7 +22,7 @@ namespace TC_Electrodomesticos
             InitializeComponent();
 
             GestorStock gestorStock = new GestorStock();
-            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            ProductoDAL usuarioDAL = new ProductoDAL();
             usuarioDAL.CargarProductosDesdeBD(gestorStock);
 
             List<ProductoBE> listaProductos = gestorStock.ListaProductos;
@@ -79,6 +79,11 @@ namespace TC_Electrodomesticos
                 }
             }
             
+        }
+
+        private void dgvDatosStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

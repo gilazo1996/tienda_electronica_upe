@@ -31,5 +31,18 @@ namespace TC_Electrodomesticos
         {
 
         }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            Admin_BuscarUserForm formBuscarUser = new Admin_BuscarUserForm();
+            formBuscarUser.ShowDialog();
+
+        }
+
+        private void btnCrearUser_Click(object sender, EventArgs e)
+        {
+            Admin_CrearUsuario formCrearUser = new Admin_CrearUsuario();
+            formCrearUser.ShowDialog();
+        }
     }
 }

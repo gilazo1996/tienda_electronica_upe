@@ -16,7 +16,7 @@ namespace TC_Electrodomesticos
     public partial class FormComprarProducto : Form
     {
         private GestorStock gestorStock = new GestorStock();
-        private UsuarioDAL dalVerProducto = new UsuarioDAL();
+        private ProductoDAL dalVerProducto = new ProductoDAL();
 
         public FormComprarProducto()
         {
@@ -131,6 +131,11 @@ namespace TC_Electrodomesticos
                 string nombreProductoSeleccionado = lboxMostrarProductos.SelectedItem.ToString();
                 // Ahora puedes usar nombreProductoSeleccionado para obtener el ID del producto
             }
+        }
+
+        private void FormComprarProducto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
