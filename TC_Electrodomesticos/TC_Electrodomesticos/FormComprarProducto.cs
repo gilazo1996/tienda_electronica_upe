@@ -21,9 +21,10 @@ namespace TC_Electrodomesticos
         public FormComprarProducto()
         {
             InitializeComponent();
+            VerProductos();
         }
 
-        private void btnVerProductos_Click(object sender, EventArgs e)
+        private void VerProductos()
         {
             try
             {
@@ -51,8 +52,39 @@ namespace TC_Electrodomesticos
                 MessageBox.Show("Error al cargar productos: " + ex.Message); //manejo de excepciones
             }
         }
+        //con esta funcion obtengo los datos de los producto del carrito
+        private void ObtenerDetallesFactura()
+        {
+            
+            foreach(var item in listBoxCarrito.Items)
+            {
+                
+                string productoSeleccionado = item.ToString();
 
+                string[] partesProducto = productoSeleccionado.Split(new string[] { " X " }, StringSplitOptions.None);
+                
+                string nombreProducto = partesProducto[0];
+                
+                int precio = Convert.ToInt32(partesProducto[1]);
+                int cantidad = Convert.ToInt32(partesProducto[2]);
+                int subtotal = precio * cantidad;
 
+                
+                UsuarioDAL usuarioDAL = new UsuarioDAL();
+                int idUsuario = UsuarioBE.IdUsuario;
+                //busco la factura asociada al cliente
+                int id_factura = usuarioDAL.ObtenerIDFacturaCliente(idUsuario);
+               //si la encuentro inserto el detalle de la venta
+                if (id_factura > 0)
+                {
+                    usuarioDAL.InsertarDetalleVenta(id_factura,nombreProducto,cantidad,subtotal);
+                    usuarioDAL.ActualizarStock(nombreProducto, cantidad);
+                }
+                
+
+            }
+
+        }
         private void btnComprarPro_Click(object sender, EventArgs e)
         {
             try
@@ -89,12 +121,16 @@ namespace TC_Electrodomesticos
 
                         if (registroClienteExitoso)
                         {
+                            int totalCompra = Convert.ToInt32(textBoxTotalCompra.Text); 
                             // Registrar la compra utilizando el ID del producto obtenido, el ID del cliente y el precio del producto
-                            bool registroCompraExitoso = usuarioDAL.RegistrarCompra(idProducto, idUsuario, precioProducto);
+                            bool registroCompraExitoso = usuarioDAL.RegistrarCompra(idUsuario,totalCompra);
 
                             if (registroCompraExitoso)
                             {
-                                MessageBox.Show("Compra exitosa. " + (clienteYaExistente ? "¡Bienvenido de nuevo!" : "¡Bienvenido, nuevo cliente!"));
+                                
+                                MessageBox.Show("Compra exitosa. " + (clienteYaExistente ? "¡Bienvenido!" : "¡Bienvenido, nuevo cliente!"));
+                                //con esta funcion obtengo los detalles de la compra
+                                ObtenerDetallesFactura();
                                 this.Close(); // Cierro el formulario después de la compra
                             }
                             else
@@ -130,7 +166,90 @@ namespace TC_Electrodomesticos
             {
                 string nombreProductoSeleccionado = lboxMostrarProductos.SelectedItem.ToString();
                 // Ahora puedes usar nombreProductoSeleccionado para obtener el ID del producto
+                //cargo el stock del producto seleccionado en el combobox
+                CargarStockComboBox();
+
             }
+        }
+
+        private void tboxNombreCompleto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //aca cargo el stock del producto en el combo box para seleccionar
+        private void CargarStockComboBox()
+        {
+            comboBoxCantidadPro.Items.Clear();
+            if (lboxMostrarProductos.SelectedItem!=null)
+            {
+                try
+                {
+                    string productoSeleccionado = lboxMostrarProductos.SelectedItem.ToString();
+
+                    string[] partesProducto = productoSeleccionado.Split(new string[] { " - " }, StringSplitOptions.None);
+                    int unidad=0;
+                    int stockProducto = Convert.ToInt32(partesProducto[3]);
+
+                    while (unidad < stockProducto)
+                    {
+                        unidad++;
+                        
+                        comboBoxCantidadPro.Items.Add(unidad.ToString());
+                    }
+                    comboBoxCantidadPro.SelectedIndex = 0;
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+
+                }
+            }
+        }
+        int totalCompra;
+        //esta funcion agrega los productos al carrito
+        private void btnAñadirAlCarrito_Click(object sender, EventArgs e)
+        {
+            
+            if (lboxMostrarProductos.SelectedItem != null && comboBoxCantidadPro.SelectedItem != null)
+            {
+                string productoSeleccionado = lboxMostrarProductos.SelectedItem.ToString();
+
+                string[] partesProducto = productoSeleccionado.Split(new string[] { " - " }, StringSplitOptions.None);
+                // obtengo el nombre del producto, el nombre del producto esta
+                // en el primer campo                 
+                listBoxCarrito.Items.Add(partesProducto[0] + " X " + partesProducto[2] + " X " + comboBoxCantidadPro.SelectedItem.ToString());
+
+                int precioProducto = Convert.ToInt32(partesProducto[2]);
+                int cantidadProducto = Int32.Parse(comboBoxCantidadPro.SelectedItem.ToString());
+                totalCompra = totalCompra + precioProducto * cantidadProducto;
+                textBoxTotalCompra.Text = totalCompra.ToString();
+
+
+            }
+        }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (listBoxCarrito.SelectedItem != null)
+            {
+                string productoSeleccionado = listBoxCarrito.SelectedItem.ToString();
+
+                string[] partesProducto = productoSeleccionado.Split(new string[] { " X " }, StringSplitOptions.None);
+                // obtengo el nombre del producto, el nombre del producto esta
+
+                int precioProducto = Convert.ToInt32(partesProducto[1]);
+                int cantidadProducto = Convert.ToInt32(partesProducto[2]);
+
+                totalCompra = totalCompra - precioProducto * cantidadProducto;
+                textBoxTotalCompra.Text = totalCompra.ToString();
+                listBoxCarrito.Items.Remove(listBoxCarrito.SelectedItem);
+            }
+        }
+
+        private void comboBoxCantidadPro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void FormComprarProducto_Load(object sender, EventArgs e)

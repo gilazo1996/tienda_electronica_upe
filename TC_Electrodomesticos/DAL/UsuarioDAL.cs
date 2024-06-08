@@ -188,5 +188,222 @@ namespace DAL
         }
 
 
+
+        public int ObtenerIDFacturaCliente(int id_cliente)
+        {
+            string consulta = "SELECT top(1) id FROM[TC_Permisos].[dbo].[Factura] " +
+                            " WHERE id_usuario = @IDCliente order by id desc";
+
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                new SqlParameter("@IDCliente", id_cliente)
+            };
+
+            DataTable dt = objConexion.LeerPorComando(consulta, parametros); //obtengo los resultados devueltos de LeerPorComanto en un datatable
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["id"]); //el valor retornado es el id de la factura
+
+            }
+
+            return -1; // Cambiar el valor de retorno según tus necesidades
+
+
+        }
+
+        public bool RegistrarCompra(int idUsuario, decimal totalCompra)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // Obtener la fecha actual
+                DateTime fechaActual = DateTime.Now;
+
+                // Insertar el registro en la tabla de Factura
+                string sqlInsertFactura = @"
+            INSERT INTO Factura (id_usuario, fecha_compra, total)
+            VALUES (@IdUsuario, @Fecha, @Total)";
+
+                SqlParameter[] parametrosFactura = new SqlParameter[]
+                {
+            new SqlParameter("@IdUsuario", idUsuario),
+            new SqlParameter("@Fecha", fechaActual),
+            new SqlParameter("@Total", totalCompra),
+                };
+
+                int filasAfectadasFactura = objConexion.EjecutarComando(sqlInsertFactura, parametrosFactura);
+
+                if (filasAfectadasFactura > 0)
+                {
+                    return true;
+
+                }
+                else
+                {
+                    Console.WriteLine("Error al insertar en la tabla Factura.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar la compra: " + ex.Message);
+                throw;
+            }
+        }
+        public bool InsertarDetalleVenta(int id_factura, string producto, int cantidad, double subtotal)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // Insertar el detalle en la tabla de detalle_factura
+                string sqlInsertDetalleFactura = @"
+                   INSERT INTO detalle_factura (id_factura, producto_comprado, cantidad, subtotal)
+                VALUES (@IdFactura, @Producto, @Cantidad, @Subtotal)";
+
+                SqlParameter[] parametrosFactura = new SqlParameter[]
+                {
+            new SqlParameter("@IdFactura", id_factura),
+            new SqlParameter("@Producto", producto),
+            new SqlParameter("@Cantidad", cantidad),
+            new SqlParameter("@Subtotal", subtotal)
+                };
+
+                int filasAfectadasDetalleFactura = objConexion.EjecutarComando(sqlInsertDetalleFactura, parametrosFactura);
+
+                if (filasAfectadasDetalleFactura > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Error al insertar en la tabla detalle_factura.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar el detalle de la factura: " + ex.Message);
+                throw;
+            }
+
+
+        }
+
+        //aca actualizo el stock del/los producto/s comprados
+
+        public void ActualizarStock(string productoComprado, int cantidadComprada)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+
+                // Insertar el detalle en la tabla de detalle_factura
+                string actualizarStock = @"
+                   UPDATE [TC_Permisos].[dbo].[Producto]  SET stockActual = stockActual-@CantidadComprada
+                   WHERE nombre = @ProductoComprado";
+
+                SqlParameter[] parametrosActualizacion = new SqlParameter[]
+                {
+                new SqlParameter("@ProductoComprado", productoComprado),
+                new SqlParameter("@CantidadComprada", cantidadComprada),
+
+                };
+                objConexion.EjecutarComando(actualizarStock, parametrosActualizacion);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error al actualizar el stock: " + e.Message);
+                throw;
+            }
+        }
+
+
+        public void VerDetallesFactura(FacturaBE factura, int idFactura)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+                // Consulta SQL que trae todos los datos del producto junto con el nombre de la categoría
+                string sqlSelectDetalleFactura = @"select
+                producto_comprado,cantidad,subtotal 
+                from [TC_Permisos].[dbo].[detalle_factura]
+                WHERE id_factura = @IDFactura";
+
+                SqlParameter[] parametroCliente = new SqlParameter[]
+                {
+                     new SqlParameter("@IDFactura", idFactura)
+                };
+                //int filasAfectadasDetalleFactura = objConexion.EjecutarComando(sqlSelectFacturas, parametroCliente);
+
+                //gestorStock.ListaProductos.Clear();
+                DataTable dtFacturas = objConexion.LeerPorComando(sqlSelectDetalleFactura, parametroCliente);
+
+                foreach (DataRow row in dtFacturas.Rows)
+                {
+                    DetalleFactura detalleFactura = new DetalleFactura
+                    {
+                        //IDFactura = Convert.ToInt32(row["producto_comprado"]),
+                        producto_comprado = row["producto_comprado"].ToString(),
+                        _cantidad = Convert.ToInt32(row["cantidad"]),
+                        _subtotal = Convert.ToDouble(row["subtotal"])
+                    };
+
+                    factura.ListaDetalles.Add(detalleFactura);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error las facturas desde la base de datos: " + ex.Message);
+                throw;
+            }
+
+        }
+        public void VerFacturasUsuario(ClienteBE cliente, int idUsuario)
+        {
+            try
+            {
+                Conexion objConexion = new Conexion();
+                // Consulta SQL que trae todos los datos del producto junto con el nombre de la categoría
+                string sqlSelectFacturas = @"
+                    SELECT CONVERT(varchar,fecha_compra,3) AS fecha_compra,total, id  
+                    FROM [TC_Permisos].[dbo].[Factura]
+                    WHERE Factura.id_usuario = @IDCliente";
+
+                SqlParameter[] parametroCliente = new SqlParameter[]
+                {
+                     new SqlParameter("@IDCliente", idUsuario)
+                };
+                //int filasAfectadasDetalleFactura = objConexion.EjecutarComando(sqlSelectFacturas, parametroCliente);
+
+                //gestorStock.ListaProductos.Clear();
+                DataTable dtFacturas = objConexion.LeerPorComando(sqlSelectFacturas, parametroCliente);
+
+                foreach (DataRow row in dtFacturas.Rows)
+                {
+                    FacturaBE factura = new FacturaBE
+                    {
+                        IDFactura = Convert.ToInt32(row["id"]),
+                        Fecha = row["fecha_compra"].ToString(),
+                        Total = Convert.ToDouble(row["total"])
+                    };
+                    VerDetallesFactura(factura, factura.IDFactura);
+
+                    cliente.ListaFacturas.Add(factura);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error las facturas desde la base de datos: " + ex.Message);
+                throw;
+            }
+
+
+        }
+
     }
 }

@@ -8,7 +8,6 @@ namespace BE
 {
     public class ProductoBE
     {
-
         public int IDproducto { get; set; }
         public string NombreProducto { get; set; }
         public string Descripcion { get; set; }
@@ -18,7 +17,7 @@ namespace BE
 
         public override string ToString()
         {
-            return $"{NombreProducto} - {Categoria} - ${Precio}";
+            return $"{NombreProducto} - {Categoria} - {Precio} - {Stock}";
         }
     }
 }

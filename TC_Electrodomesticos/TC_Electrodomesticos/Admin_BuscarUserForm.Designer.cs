@@ -50,6 +50,7 @@
             this.dataGridUsuarios.Name = "dataGridUsuarios";
             this.dataGridUsuarios.Size = new System.Drawing.Size(575, 210);
             this.dataGridUsuarios.TabIndex = 0;
+            this.dataGridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsuarios_CellContentClick);
             this.dataGridUsuarios.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsuarios_CellEndEdit);
             this.dataGridUsuarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridUsuarios_CellFormatting);
             // 

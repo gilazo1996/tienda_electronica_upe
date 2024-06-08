@@ -31,7 +31,6 @@ namespace TC_Electrodomesticos
 
             dataGridUsuarios.AutoGenerateColumns = false;
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "id", HeaderText = "Id", DataPropertyName = "id" });
-
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "nombre", HeaderText = "Nombre", DataPropertyName = "nombre" });
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "email", HeaderText = "Correo", DataPropertyName = "email" });
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "estado", HeaderText = "Estado", DataPropertyName = "estado" });
@@ -56,8 +55,6 @@ namespace TC_Electrodomesticos
 
         private void dataGridUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
-            
             int estadoColumnIndex = 3; // índice de la columna "estado" en el DataGrid
 
             if (e.ColumnIndex == estadoColumnIndex && e.Value != null)
@@ -173,6 +170,11 @@ namespace TC_Electrodomesticos
             {
                 MessageBox.Show("Error al ejecutar los comandos." + ex.Message);
             }
+        }
+
+        private void dataGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

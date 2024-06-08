@@ -39,5 +39,11 @@ namespace TC_Electrodomesticos
             FormComprarProducto formComprarProducto = new FormComprarProducto(); //instancia del formulario para registarse
             formComprarProducto.ShowDialog(); //muestro el formulario como un modal//se supone que al comprar un producto, se le pid
         }
+
+        private void btnVerCompras_Click(object sender, EventArgs e)
+        {
+            FormVerCompras formVerCompras = new FormVerCompras();
+            formVerCompras.ShowDialog();
+        }
     }
 }

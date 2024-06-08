@@ -77,5 +77,10 @@ namespace TC_Electrodomesticos
         {
             this.Close();
         }
+
+        private void cboxRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -76,6 +76,10 @@
     <Compile Include="FormGestorStock.Designer.cs">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerCompras.Designer.cs" />
     <Compile Include="VerProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +127,7 @@
     <EmbeddedResource Include="FormGestorStock.resx">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormVerCompras.resx" />
     <EmbeddedResource Include="VerProductosForm.resx">
       <DependentUpon>VerProductosForm.cs</DependentUpon>
     </EmbeddedResource>

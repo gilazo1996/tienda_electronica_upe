@@ -31,6 +31,7 @@
             this.textCliente = new System.Windows.Forms.Label();
             this.btnClienteSalir = new System.Windows.Forms.Button();
             this.btnUsuarioComprar = new System.Windows.Forms.Button();
+            this.btnVerCompras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textCliente
@@ -55,7 +56,7 @@
             // 
             // btnUsuarioComprar
             // 
-            this.btnUsuarioComprar.Location = new System.Drawing.Point(22, 227);
+            this.btnUsuarioComprar.Location = new System.Drawing.Point(115, 83);
             this.btnUsuarioComprar.Name = "btnUsuarioComprar";
             this.btnUsuarioComprar.Size = new System.Drawing.Size(134, 23);
             this.btnUsuarioComprar.TabIndex = 2;
@@ -63,11 +64,22 @@
             this.btnUsuarioComprar.UseVisualStyleBackColor = true;
             this.btnUsuarioComprar.Click += new System.EventHandler(this.btnUsuarioComprar_Click);
             // 
+            // btnVerCompras
+            // 
+            this.btnVerCompras.Location = new System.Drawing.Point(115, 133);
+            this.btnVerCompras.Name = "btnVerCompras";
+            this.btnVerCompras.Size = new System.Drawing.Size(134, 23);
+            this.btnVerCompras.TabIndex = 4;
+            this.btnVerCompras.Text = "Ver compras";
+            this.btnVerCompras.UseVisualStyleBackColor = true;
+            this.btnVerCompras.Click += new System.EventHandler(this.btnVerCompras_Click);
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 288);
+            this.Controls.Add(this.btnVerCompras);
             this.Controls.Add(this.btnUsuarioComprar);
             this.Controls.Add(this.btnClienteSalir);
             this.Controls.Add(this.textCliente);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Label textCliente;
         private System.Windows.Forms.Button btnClienteSalir;
         private System.Windows.Forms.Button btnUsuarioComprar;
+        private System.Windows.Forms.Button btnVerCompras;
     }
 }

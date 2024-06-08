@@ -117,6 +117,7 @@
             this.cboxRoles.Name = "cboxRoles";
             this.cboxRoles.Size = new System.Drawing.Size(100, 21);
             this.cboxRoles.TabIndex = 21;
+            this.cboxRoles.SelectedIndexChanged += new System.EventHandler(this.cboxRoles_SelectedIndexChanged);
             // 
             // label1
             // 
