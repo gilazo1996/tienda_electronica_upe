@@ -102,6 +102,29 @@ namespace DAL
             }
         }
 
+        public void VisualizarCliente(List<ClienteBE> lista)
+        {
+
+            string sqlvisualizarcliente = "select clientes.nombre, clientes.cuil, usuarios.email from clientes, usuarios where clientes.id_usuario_creador=usuarios.id";
+
+
+            DataTable tabla = objConexion.LeerPorComando(sqlvisualizarcliente);
+
+            foreach (DataRow row in tabla.Rows)
+            {
+                ClienteBE cliente = new ClienteBE()
+                {
+                    NombreCliente = row["nombre"].ToString(),
+                    CuilCliente = row["cuil"].ToString(),
+                    //IdUsuarioCreador = Convert.ToInt32(row["id_usuario_creador"]),
+                    Email = row["email"].ToString(),
+                };
+
+                lista.Add(cliente);
+            }
+        }
+
+
         public bool RegistrarCompra(int idProducto, int idUsuario, decimal precioProducto)
         {
             try

@@ -26,8 +26,9 @@ namespace TC_Electrodomesticos
 
         }
 
-        private void VerMisCompras()
+        public int VerMisCompras()
         {
+            int resultado = 1;
             try
             {
                 int idUsuario = UsuarioBE.IdUsuario;
@@ -38,31 +39,35 @@ namespace TC_Electrodomesticos
                 // verifico si la lista de productos está llena
                 if (cliente.ListaFacturas.Count == 0) //valido que se pueda mostrar los productos
                 {
-                    MessageBox.Show("No se encontraron facturas asocidas.");
+                    resultado = 0;
 
                 }
-
-                // limpio el ListBox antes de añadir los nuevos productos
-
-                listBoxMisCompras.Items.Clear();
-
-                // agrego las facturas al ListBox
-                foreach (FacturaBE factura in cliente.ListaFacturas)
+                else
                 {
-                   listBoxMisCompras.Items.Add(factura); //por c ada producto encontrado, lo agrego al listbox
-                    foreach(DetalleFactura detalleFactura in factura.ListaDetalles)
+                    // limpio el ListBox antes de añadir los nuevos productos
+                    listBoxMisCompras.Items.Clear();
+
+                    // agrego las facturas al ListBox
+                    foreach (FacturaBE factura in cliente.ListaFacturas)
                     {
-                        listBoxMisCompras.Items.Add(detalleFactura);
-                        
+                        listBoxMisCompras.Items.Add(factura); //por c ada producto encontrado, lo agrego al listbox
+                        foreach (DetalleFactura detalleFactura in factura.ListaDetalles)
+                        {
+                            listBoxMisCompras.Items.Add(detalleFactura);
+
+                        }
+                        listBoxMisCompras.Items.Add("");
                     }
-                    listBoxMisCompras.Items.Add("");
+
+
                 }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar las facturas: " + ex.Message); //manejo de excepciones
             }
-
+            return resultado;
         }
         private void btnSalirCompras_Click(object sender, EventArgs e)
         {

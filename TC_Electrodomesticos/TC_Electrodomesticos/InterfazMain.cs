@@ -74,6 +74,17 @@ namespace TC_Electrodomesticos
                     // cierro el formulario de inicio de sesión
                     //this.Hide();
                 }//FIN CODIGO ROA
+
+                //Gestion de Gerente
+                if (permisosUsuario.Contains("gerente"))
+                {
+                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gerente.");
+
+                    FormGerente formulariogerente = new FormGerente();
+                    formulariogerente.ShowDialog();
+
+                    //this.Hide();
+                }
             }
             else
             {

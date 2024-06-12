@@ -85,6 +85,24 @@ namespace TC_Electrodomesticos
             }
 
         }
+        private int ValidarCamposCompletos()
+        {
+            string nombre = tboxNombreCompleto.Text;
+            string cuil = tboxCuil.Text;
+            int resultado = -1;
+            if(string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(cuil))
+            {
+                MessageBox.Show("Complete todos los campos");
+                resultado = -1;
+
+
+            }
+            else
+            {
+                resultado = 0;
+            }
+            return resultado ;
+        }
         private void btnComprarPro_Click(object sender, EventArgs e)
         {
             try
@@ -97,14 +115,16 @@ namespace TC_Electrodomesticos
                     return;
                 }
 
-                string nombre = tboxNombreCompleto.Text;
-                string cuil = tboxCuil.Text;
-
                 // Tomamos el ID del usuario autenticado desde la propiedad estática de UsuarioBE
                 int idUsuario = UsuarioBE.IdUsuario;
+                int camposCompletos = ValidarCamposCompletos();
 
-                if (idUsuario > 0) // Verifico si hay un ID de usuario cargado, es decir, si el usuario se logueó
+                if (idUsuario > 0 && camposCompletos == 0) // Verifico si hay un ID de usuario cargado, es decir, si el usuario se logueó
                 {
+                    
+                    string nombre = tboxNombreCompleto.Text;
+                    string cuil = tboxCuil.Text;
+
                     UsuarioDAL usuarioDAL = new UsuarioDAL();
 
                     // Obtener el ID del producto seleccionado utilizando ProductoDAL
@@ -128,7 +148,7 @@ namespace TC_Electrodomesticos
                             if (registroCompraExitoso)
                             {
                                 
-                                MessageBox.Show("Compra exitosa. " + (clienteYaExistente ? "¡Bienvenido!" : "¡Bienvenido, nuevo cliente!"));
+                                MessageBox.Show( (clienteYaExistente ? "Compra exitosa! ": "¡Bienvenido, nuevo cliente!"));
                                 //con esta funcion obtengo los detalles de la compra
                                 ObtenerDetallesFactura();
                                 this.Close(); // Cierro el formulario después de la compra
@@ -147,10 +167,6 @@ namespace TC_Electrodomesticos
                     {
                         MessageBox.Show("No se pudo obtener el ID del producto seleccionado. Por favor, inténtalo nuevamente.");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Necesita registrarse y estar logueado para comprar.");
                 }
             }
             catch (Exception ex)

@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,7 +34,7 @@ namespace TC_Electrodomesticos
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "id", HeaderText = "Id", DataPropertyName = "id" });
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "nombre", HeaderText = "Nombre", DataPropertyName = "nombre" });
             dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "email", HeaderText = "Correo", DataPropertyName = "email" });
-            dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "estado", HeaderText = "Estado", DataPropertyName = "estado" });
+            dataGridUsuarios.Columns.Add(new DataGridViewTextBoxColumn { Name = "estado", HeaderText = "Estado", DataPropertyName = "estado", ReadOnly=true});
         }
 
         private void btnVerBuscarUser_Click(object sender, EventArgs e)
@@ -144,7 +145,6 @@ namespace TC_Electrodomesticos
 
         private void dataGridUsuarios_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-
             int rowIndex = e.RowIndex;
             int columnIndex = e.ColumnIndex;
             try
@@ -156,7 +156,16 @@ namespace TC_Electrodomesticos
                     string nombreColumna = dataGridUsuarios.Columns[columnIndex].Name;
                     string nuevoValor = row.Cells[columnIndex].Value.ToString();
 
-                    //actualizo el valor en la base de datos
+                    // Validar email si se está editando la columna email
+                    if (nombreColumna == "email" && !EsEmailValido(nuevoValor))
+                    {
+                        MessageBox.Show("Por favor, ingresa un correo electrónico válido.");
+                        // Restablecer el valor anterior
+                        dataGridUsuarios.CancelEdit();
+                        return;
+                    }
+
+                    // Actualizar el valor en la base de datos
                     string mensaje;
                     bool resultado = _adminBLL.ModificarUsuarioCampo(usuarioId, nombreColumna, nuevoValor, out mensaje);
 
@@ -165,11 +174,18 @@ namespace TC_Electrodomesticos
                         MessageBox.Show(mensaje);
                     }
                 }
-
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar los comandos." + ex.Message);
             }
+        }
+
+        private bool EsEmailValido(string email)
+        {
+            // expresion regular para validar el formato del correo electrónico
+            string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, patronEmail);
         }
 
         private void dataGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

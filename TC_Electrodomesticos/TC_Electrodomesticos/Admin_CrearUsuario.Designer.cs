@@ -166,7 +166,6 @@
             this.Controls.Add(this.tboxCorreoCrear);
             this.Name = "Admin_CrearUsuario";
             this.Text = "Admin_CrearUsuario";
-            this.Load += new System.EventHandler(this.Admin_CrearUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

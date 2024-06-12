@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,6 +57,12 @@ namespace TC_Electrodomesticos
                     return;
                 }
 
+                if (!EsEmailValido(email))
+                {
+                    MessageBox.Show("Por favor, ingresa un correo electrónico válido.");
+                    return;
+                }
+
                 string mensaje;
                 bool resultado = _administradorBL.CrearUsuario(nombre, email, password, idRol, out mensaje);
 
@@ -68,9 +75,11 @@ namespace TC_Electrodomesticos
 
         }
 
-        private void Admin_CrearUsuario_Load(object sender, EventArgs e)
+        private bool EsEmailValido(string email)
         {
-
+            // expresion regular para validar el formato del correo electrónico
+            string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, patronEmail);
         }
 
         private void btnCerrarForm_Click(object sender, EventArgs e)

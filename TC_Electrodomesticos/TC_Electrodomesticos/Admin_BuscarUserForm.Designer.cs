@@ -38,6 +38,7 @@
             this.btnBlockUser = new System.Windows.Forms.Button();
             this.btnUnlockUser = new System.Windows.Forms.Button();
             this.btnCerrarBuscar = new System.Windows.Forms.Button();
+            this.labelBuscarExplicacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             // 
             this.btnVerBuscarUser.Location = new System.Drawing.Point(266, 12);
             this.btnVerBuscarUser.Name = "btnVerBuscarUser";
-            this.btnVerBuscarUser.Size = new System.Drawing.Size(147, 23);
+            this.btnVerBuscarUser.Size = new System.Drawing.Size(151, 23);
             this.btnVerBuscarUser.TabIndex = 3;
             this.btnVerBuscarUser.Text = "Buscar Usuario";
             this.btnVerBuscarUser.UseVisualStyleBackColor = true;
@@ -98,9 +99,9 @@
             // 
             // btnVerListaUsers
             // 
-            this.btnVerListaUsers.Location = new System.Drawing.Point(440, 13);
+            this.btnVerListaUsers.Location = new System.Drawing.Point(436, 13);
             this.btnVerListaUsers.Name = "btnVerListaUsers";
-            this.btnVerListaUsers.Size = new System.Drawing.Size(147, 22);
+            this.btnVerListaUsers.Size = new System.Drawing.Size(151, 22);
             this.btnVerListaUsers.TabIndex = 6;
             this.btnVerListaUsers.Text = "Ver todos los usuarios";
             this.btnVerListaUsers.UseVisualStyleBackColor = true;
@@ -136,11 +137,21 @@
             this.btnCerrarBuscar.UseVisualStyleBackColor = true;
             this.btnCerrarBuscar.Click += new System.EventHandler(this.btnCerrarBuscar_Click);
             // 
+            // labelBuscarExplicacion
+            // 
+            this.labelBuscarExplicacion.AutoSize = true;
+            this.labelBuscarExplicacion.Location = new System.Drawing.Point(335, 72);
+            this.labelBuscarExplicacion.Name = "labelBuscarExplicacion";
+            this.labelBuscarExplicacion.Size = new System.Drawing.Size(252, 13);
+            this.labelBuscarExplicacion.TabIndex = 10;
+            this.labelBuscarExplicacion.Text = "Para editar un usuario haga doble click en la casilla.";
+            // 
             // Admin_BuscarUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 350);
+            this.Controls.Add(this.labelBuscarExplicacion);
             this.Controls.Add(this.btnCerrarBuscar);
             this.Controls.Add(this.btnUnlockUser);
             this.Controls.Add(this.btnBlockUser);
@@ -172,5 +183,6 @@
         private System.Windows.Forms.Button btnBlockUser;
         private System.Windows.Forms.Button btnUnlockUser;
         private System.Windows.Forms.Button btnCerrarBuscar;
+        private System.Windows.Forms.Label labelBuscarExplicacion;
     }
 }

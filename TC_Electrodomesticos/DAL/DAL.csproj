@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="GerenteDAL.cs" />
     <Compile Include="Permisos.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

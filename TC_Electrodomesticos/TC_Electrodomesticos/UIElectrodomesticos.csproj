@@ -70,6 +70,12 @@
     <Compile Include="FormControlStock.Designer.cs">
       <DependentUpon>FormControlStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerente.Designer.cs">
+      <DependentUpon>FormGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGestorStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +85,9 @@
     <Compile Include="FormVerCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVerCompras.Designer.cs" />
+    <Compile Include="FormVerCompras.designer.cs">
+      <DependentUpon>FormVerCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,10 +132,15 @@
     <EmbeddedResource Include="FormControlStock.resx">
       <DependentUpon>FormControlStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGerente.resx">
+      <DependentUpon>FormGerente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGestorStock.resx">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVerCompras.resx" />
+    <EmbeddedResource Include="FormVerCompras.resx">
+      <DependentUpon>FormVerCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerProductosForm.resx">
       <DependentUpon>VerProductosForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -151,6 +151,7 @@
             this.Controls.Add(this.tboxRegisterName);
             this.Name = "FromRegistro";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.FromRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
