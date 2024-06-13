@@ -11,7 +11,7 @@
 	en el archivo de [UsuarioDAL.cs] me tiraba error el proyecto cuando el mismo
 	al compilar detectaba que la conexionSQL para visualizar un usuario no podia
 	tener de referencia una funcion estatica, solo le saque el [static] a la funcion
-	[VisualizarUsuario]. Luego de eso funciona sin problemas.
+	[VisualizarUsuario.cs]. Luego de eso funciona sin problemas.
 --------------------------------------------------------------------------------------------
 #CORRECCIONES [31-05-24]:
 	Ahi les paso la Base de Datos de [TC_Permisos [v3][31-05-24].sql] actualizada acorde 
@@ -22,6 +22,32 @@
 		- Agregada la tabla de detalle_venta
 		- Borrado de tablas Almacen y Proveedor y sus referencias en Producto
 		- Borrado de tabla Vendedor y sus referencias en Roles
+--------------------------------------------------------------------------------------------
+#CORRECCIONES [13-06-24]:
+	Ahi les paso la actualizacion de todo lo que estuve armando con respecto a la parte
+	correspondiente del actor GESTOR DE STOCK, la base de datos no fue modificada.
+	
+		- Agregado el formulario [FormAltaProducto.cs] con sus metodos y referencias
+		   que permiten agregar un nuevo producto a la BDD.
+
+		- Agregado el formulario [FormBuscarProducto.cs] con sus metodos y referencias
+
+		- Modificacion del formulario [FormVerInventario.cs], ahora se pueden eliminar filas
+		   seleccionando un articulo y borrandolo de la base.
+		
+		- Modificacion del formulario [FormControlStock.cs], ademas de la tabla donde
+		   figuran los valores de nivel de stock coloreados, tambien se agrego un groupBox
+		   referencia de que significa cada color de nivel de estado de stock de cada producto
+
+		- Agregado de los formularios [CategoriaBLL.cs][ProductoBLL.cs]
+		- Agregado del formulario [CategoriaDAL.cs] en la capa DAL
+		- Modificacion del formulario [ProductoDAL.cs] donde se agregan las siguientes
+		   funciones:
+			- public bool RegistrarProductoNuevo(......);
+			- public DataTable DevolverDatosdeProducto(......);
+			- public bool UpdateProductoPorID(......);
+			- public bool EliminarProductoPorID(......);
+
 --------------------------------------------------------------------------------------------
 #CORRECCIONES [*poner la fecha]:
 	    

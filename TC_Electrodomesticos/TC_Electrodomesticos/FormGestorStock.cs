@@ -29,5 +29,23 @@ namespace TC_Electrodomesticos
         {
             this.Close();
         }
+
+        private void btnGStockVerInventario_Click(object sender, EventArgs e)
+        {
+            FormVerInventario formularioVerInventario = new FormVerInventario(this);
+            formularioVerInventario.ShowDialog();
+        }
+
+        private void btnGStockCargarNewProd_Click(object sender, EventArgs e)
+        {
+            FormAltaProducto formularioAltaProd = new FormAltaProducto(this);
+            formularioAltaProd.ShowDialog();
+        }
+
+        private void btnGStockBuscarProd_Click(object sender, EventArgs e)
+        {
+            FormBuscarProducto formularioBuscarProd = new FormBuscarProducto(this);
+            formularioBuscarProd.ShowDialog();
+        }
     }
 }

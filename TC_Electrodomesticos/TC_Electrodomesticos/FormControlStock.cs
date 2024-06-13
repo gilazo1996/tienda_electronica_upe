@@ -22,15 +22,18 @@ namespace TC_Electrodomesticos
             InitializeComponent();
 
             GestorStock gestorStock = new GestorStock();
-            ProductoDAL usuarioDAL = new ProductoDAL();
-            usuarioDAL.CargarProductosDesdeBD(gestorStock);
+            ProductoDAL productoDAL = new ProductoDAL();
+            productoDAL.CargarProductosDesdeBD(gestorStock);
 
-            List<ProductoBE> listaProductos = gestorStock.ListaProductos;
+            List<ProductoBE> listaStock = gestorStock.ListaProductos;
 
-            if (listaProductos != null && listaProductos.Count > 0)
+            if (listaStock != null && listaStock.Count > 0)
             {
                 dgvDatosStock.Refresh();
-                dgvDatosStock.DataSource = listaProductos;
+                dgvDatosStock.AllowUserToAddRows = false;//SE DESACTIVAN LAS EDICIONES DE CELDAS.
+                dgvDatosStock.AllowUserToDeleteRows = false;//SE DESACTIVA LA OPCION DE AGREGAR FILAS.
+                dgvDatosStock.ReadOnly = true;//LOS DATOS SOLO SE PODRAN VISUALIZAR, PERO NO MODIFICARSE DESDE EL DGRID.
+                dgvDatosStock.DataSource = listaStock;
                 //dgvDatosStock.Columns[0].HeaderText = "Id";   //PARA CAMBIAR EL NOMBRE DE LA CABECERA DE COLUMNA
                 dgvDatosStock.Columns["IDproducto"].Visible = false;
                 dgvDatosStock.Columns["Descripcion"].Visible = false;
@@ -79,11 +82,6 @@ namespace TC_Electrodomesticos
                 }
             }
             
-        }
-
-        private void dgvDatosStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 

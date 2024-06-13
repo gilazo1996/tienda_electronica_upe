@@ -58,6 +58,18 @@
     <Compile Include="Admin_CrearUsuario.Designer.cs">
       <DependentUpon>Admin_CrearUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAltaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaProducto.Designer.cs">
+      <DependentUpon>FormAltaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarProducto.Designer.cs">
+      <DependentUpon>FormBuscarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormComprarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +79,7 @@
     <Compile Include="FormControlStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormControlStock.Designer.cs">
+    <Compile Include="FormControlStock.designer.cs">
       <DependentUpon>FormControlStock.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGerente.cs">
@@ -79,7 +91,7 @@
     <Compile Include="FormGestorStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGestorStock.Designer.cs">
+    <Compile Include="FormGestorStock.designer.cs">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVerCompras.cs">
@@ -87,6 +99,12 @@
     </Compile>
     <Compile Include="FormVerCompras.designer.cs">
       <DependentUpon>FormVerCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVerInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerInventario.Designer.cs">
+      <DependentUpon>FormVerInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="VerProductosForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +144,12 @@
     <EmbeddedResource Include="Admin_CrearUsuario.resx">
       <DependentUpon>Admin_CrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaProducto.resx">
+      <DependentUpon>FormAltaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarProducto.resx">
+      <DependentUpon>FormBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormComprarProducto.resx">
       <DependentUpon>FormComprarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerCompras.resx">
       <DependentUpon>FormVerCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerInventario.resx">
+      <DependentUpon>FormVerInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerProductosForm.resx">
       <DependentUpon>VerProductosForm.cs</DependentUpon>

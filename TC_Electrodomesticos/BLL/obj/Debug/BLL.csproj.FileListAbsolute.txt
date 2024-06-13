@@ -31,3 +31,14 @@ C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BLL\
 C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.dll
 C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\BLL.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\BLL.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\BE.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\DAL.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\BE.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\bin\Debug\DAL.pdb
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.dll
+C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BLL\obj\Debug\BLL.pdb

@@ -134,5 +134,123 @@ namespace DAL
                 throw;
             }
         }
+
+        public bool RegistrarProductoNuevo(string nombre, double precio, int stockMinimo, int unidades, string descripcion, int categoria)
+        {
+            try
+            {
+                Conexion connect = new Conexion();    
+                string comandInsertProd = "INSERT INTO Producto(nombre, precio, stockMinimo, stockActual, descripcion, categoriaId) VALUES (@Nombre, @Precio, @StockMinimo, @StockActual, @Descripcion, @CategoriaId)";
+                SqlParameter[] parametrosInsertProducto = new SqlParameter[]
+                {
+                    new SqlParameter("@Nombre", nombre), //los parametros de cada campo de la tabla son asignados a los valores recibidos del metodo
+                    new SqlParameter("@Precio", precio),
+                    new SqlParameter("@StockMinimo", stockMinimo),
+                    new SqlParameter("@StockActual", unidades),
+                    new SqlParameter("@Descripcion", descripcion),
+                    new SqlParameter("@CategoriaId", categoria)
+                };
+                int filasAfectadasProducto = connect.EscribirPorComando(comandInsertProd, parametrosInsertProducto);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
+
+        public DataTable DevolverDatosdeProducto(int idReceived, string contextBusqueda)
+        {
+            DataTable dtableProd = new DataTable();
+
+            try
+            {
+                Conexion connect = new Conexion();
+
+                if(contextBusqueda == "id")
+                {
+                    string comandConsultID = @"SELECT * FROM Producto WHERE id = @idProducto";
+
+                    SqlParameter[] idParametros = new SqlParameter[]
+                    {
+                    new SqlParameter("@idProducto", idReceived)
+                    };
+
+                    dtableProd = connect.LeerPorComando(comandConsultID, idParametros);
+                }//''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                if (contextBusqueda == "categoria")
+                {
+                    string comandConsultCatego = @"SELECT * FROM Producto WHERE categoriaId = @idCategoria";
+
+                    SqlParameter[] idParametros = new SqlParameter[]
+                    {
+                    new SqlParameter("@idCategoria", idReceived)
+                    };
+
+                    dtableProd = connect.LeerPorComando(comandConsultCatego, idParametros);
+                }
+                if (idReceived == 0)
+                {
+                    string comandConsultNombre = @"SELECT * FROM Producto AS p WHERE p.nombre LIKE @Nombre";
+
+                    SqlParameter[] idParametros = new SqlParameter[]
+                    {
+                    new SqlParameter("@Nombre", contextBusqueda)
+                    };
+
+                    dtableProd = connect.LeerPorComando(comandConsultNombre, idParametros);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener resultados por ID: " + ex.Message);
+                throw;
+            }
+            return dtableProd;
+        }
+
+        public bool UpdateProductoPorID(int id, string nombre, double precio, int unidades, string descripcion, int categoria)
+        {
+            try
+            {
+                Conexion connect = new Conexion();
+                string comandUpdateProd = "UPDATE Producto SET nombre = @Nombre, precio = @Precio, stockActual = @StockActual, descripcion = @Descripcion, categoriaId = @CategoriaId WHERE id = @Id;";
+                SqlParameter[] parametrosUpdateProducto = new SqlParameter[]
+                {
+                    new SqlParameter("@Id", id),
+                    new SqlParameter("@Nombre", nombre), //los parametros de cada campo de la tabla son asignados a los valores recibidos del metodo
+                    new SqlParameter("@Precio", precio),
+                    new SqlParameter("@StockActual", unidades),
+                    new SqlParameter("@Descripcion", descripcion),
+                    new SqlParameter("@CategoriaId", categoria)
+                };
+                int filasAfectadasProducto = connect.EscribirPorComando(comandUpdateProd, parametrosUpdateProducto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
+
+        public bool EliminarProductoPorID(int idReceived)
+        {
+            try
+            {
+                Conexion connect = new Conexion();
+                string comandDeleteProd = "DELETE FROM Producto WHERE id = @Id";
+
+                SqlParameter[] parametrosDeleteProducto = new SqlParameter[]
+                {
+                    new SqlParameter("@Id", idReceived)
+                };
+                int filasAfectadasProducto = connect.EscribirPorComando(comandDeleteProd, parametrosDeleteProducto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
     }
 }

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
+    <Compile Include="CategoriaDAL.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="GerenteDAL.cs" />
     <Compile Include="Permisos.cs" />
