@@ -275,7 +275,7 @@ namespace DAL
                 throw;
             }
         }
-        public bool InsertarDetalleVenta(int id_factura, string producto, int cantidad, double subtotal)
+        public bool InsertarDetalleVenta(int id_factura, int id_producto, int cantidad, double subtotal)
         {
             try
             {
@@ -283,13 +283,13 @@ namespace DAL
 
                 // Insertar el detalle en la tabla de detalle_factura
                 string sqlInsertDetalleFactura = @"
-                   INSERT INTO detalle_factura (id_factura, producto_comprado, cantidad, subtotal)
+                   INSERT INTO detalle_factura (id_factura, id_producto_comprado, cantidad, subtotal)
                 VALUES (@IdFactura, @Producto, @Cantidad, @Subtotal)";
 
                 SqlParameter[] parametrosFactura = new SqlParameter[]
                 {
             new SqlParameter("@IdFactura", id_factura),
-            new SqlParameter("@Producto", producto),
+            new SqlParameter("@Producto", id_producto),
             new SqlParameter("@Cantidad", cantidad),
             new SqlParameter("@Subtotal", subtotal)
                 };
@@ -351,8 +351,10 @@ namespace DAL
                 Conexion objConexion = new Conexion();
                 // Consulta SQL que trae todos los datos del producto junto con el nombre de la categoría
                 string sqlSelectDetalleFactura = @"select
-                producto_comprado,cantidad,subtotal 
+                nombre AS producto_comprado,cantidad,subtotal 
                 from [TC_Permisos].[dbo].[detalle_factura]
+                INNER JOIN [TC_Permisos].[dbo].[Producto] AS p
+                ON p.id = detalle_factura.id_producto_comprado
                 WHERE id_factura = @IDFactura";
 
                 SqlParameter[] parametroCliente = new SqlParameter[]
@@ -404,6 +406,7 @@ namespace DAL
 
                 //gestorStock.ListaProductos.Clear();
                 DataTable dtFacturas = objConexion.LeerPorComando(sqlSelectFacturas, parametroCliente);
+                cliente.ListaFacturas.Clear();
 
                 foreach (DataRow row in dtFacturas.Rows)
                 {

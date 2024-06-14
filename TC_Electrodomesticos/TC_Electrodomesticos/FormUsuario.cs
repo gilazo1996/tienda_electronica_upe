@@ -44,18 +44,18 @@ namespace TC_Electrodomesticos
         {
             FormVerCompras formVerCompras = new FormVerCompras();
 
-            //int hayCompras = Convert.ToInt32(formVerCompras.VerMisCompras());
+            int hayCompras = Convert.ToInt32(formVerCompras.VerMisCompras());
             ////verifico si hay compras que mostrar, en caso positivo lo muestro en  una ventana
-            //if(hayCompras > 0)
-            //{
+            if(hayCompras > 0)
+            {
             formVerCompras.ShowDialog();
 
-            //}
-            //else
-            //{
-            //   MessageBox.Show("No has hecho ninguna compra"); 
+            }
+            else
+            {
+               MessageBox.Show("No has hecho ninguna compra"); 
 
-            //}
+            }
         }
 
         private void lModifiPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

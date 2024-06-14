@@ -74,10 +74,15 @@ namespace TC_Electrodomesticos
                 int idUsuario = UsuarioBE.IdUsuario;
                 //busco la factura asociada al cliente
                 int id_factura = usuarioDAL.ObtenerIDFacturaCliente(idUsuario);
-               //si la encuentro inserto el detalle de la venta
+                //si la encuentro inserto el detalle de la venta
+
+                // Obtener el ID del producto seleccionado utilizando ProductoDAL
+                ProductoDAL productoDAL = new ProductoDAL();
+                int idProducto = productoDAL.ObtenerIdProductoPorNombre(nombreProducto);
+
                 if (id_factura > 0)
                 {
-                    usuarioDAL.InsertarDetalleVenta(id_factura,nombreProducto,cantidad,subtotal);
+                    usuarioDAL.InsertarDetalleVenta(id_factura,idProducto,cantidad,subtotal);
                     usuarioDAL.ActualizarStock(nombreProducto, cantidad);
                 }
                 
