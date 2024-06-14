@@ -114,7 +114,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormularioAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin";
+            this.Text = "Administrador";
             this.Load += new System.EventHandler(this.FormularioAdministrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

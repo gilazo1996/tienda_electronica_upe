@@ -122,7 +122,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGestorStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGestorStock";
+            this.Text = "Gestor de Stock";
             this.ResumeLayout(false);
             this.PerformLayout();
 

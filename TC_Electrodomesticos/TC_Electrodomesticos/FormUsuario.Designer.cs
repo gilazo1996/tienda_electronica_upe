@@ -98,7 +98,7 @@
             this.Controls.Add(this.textCliente);
             this.Name = "FormUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCliente";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FormCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

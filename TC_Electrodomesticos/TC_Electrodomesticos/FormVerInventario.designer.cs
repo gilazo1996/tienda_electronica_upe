@@ -94,7 +94,7 @@ namespace TC_Electrodomesticos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormVerInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGestorStock - FormVerInventario";
+            this.Text = "Ver Inventario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -205,7 +205,7 @@ namespace TC_Electrodomesticos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAltaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGestorStock - FormAltaProducto";
+            this.Text = "Agregar Producto";
             this.gboxAltaProd.ResumeLayout(false);
             this.gboxAltaProd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStockProd)).EndInit();

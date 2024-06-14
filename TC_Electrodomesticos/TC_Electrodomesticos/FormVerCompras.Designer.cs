@@ -66,13 +66,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(660, 450);
             this.Controls.Add(this.btnSalirCompras);
             this.Controls.Add(this.listBoxMisCompras);
             this.Controls.Add(this.label1);
             this.Name = "FormVerCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver mis compras";
+            this.Load += new System.EventHandler(this.FormVerCompras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -166,7 +166,7 @@
             this.Controls.Add(this.tboxCorreoCrear);
             this.Name = "Admin_CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin_CrearUsuario";
+            this.Text = "Crear Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

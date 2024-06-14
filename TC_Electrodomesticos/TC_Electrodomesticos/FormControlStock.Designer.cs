@@ -218,7 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormControlStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGestorStock - Control de Stock";
+            this.Text = "Control de Stock";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosStock)).EndInit();
             this.gboxValoresStock.ResumeLayout(false);
             this.gboxValoresStock.PerformLayout();

@@ -23,7 +23,6 @@ namespace TC_Electrodomesticos
             InitializeComponent();
             VerMisCompras();
 
-
         }
 
         public int VerMisCompras()
@@ -79,6 +78,9 @@ namespace TC_Electrodomesticos
 
         }
 
-
+        private void FormVerCompras_Load(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }

@@ -164,7 +164,7 @@
             this.Controls.Add(this.tboxCorreoModi);
             this.Name = "FormModificarPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormModificarPerfil";
+            this.Text = "Modificar Perfil";
             this.Load += new System.EventHandler(this.FormModificarPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pMostrarContra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOcultarContra)).EndInit();

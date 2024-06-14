@@ -102,18 +102,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(536, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "correo";
+            this.label2.Text = "Correo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(526, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "contraseña";
+            this.label3.Text = "Contraseña";
             // 
             // pictureBox1
             // 
@@ -138,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(608, 404);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelTitulo);
@@ -151,7 +152,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "InterfazMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Tienda Electronica";
             this.Load += new System.EventHandler(this.InterfazMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

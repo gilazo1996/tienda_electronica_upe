@@ -306,7 +306,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormBuscarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGestorStock - FormBuscarProducto";
+            this.Text = "Busqueda de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultadoBusqueda)).EndInit();
             this.gboxArticuloSelect.ResumeLayout(false);
             this.gboxArticuloSelect.PerformLayout();

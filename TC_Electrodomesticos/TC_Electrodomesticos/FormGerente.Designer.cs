@@ -153,7 +153,7 @@
             this.Controls.Add(this.bListaClientes);
             this.Name = "FormGerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormGerente";
+            this.Text = "Gerente";
             this.Load += new System.EventHandler(this.FormGerente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dListaGerente)).EndInit();
             this.ResumeLayout(false);
