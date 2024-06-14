@@ -54,19 +54,24 @@
             // 
             // btnSalirCompras
             // 
-            this.btnSalirCompras.Location = new System.Drawing.Point(18, 354);
+            this.btnSalirCompras.BackColor = System.Drawing.Color.Silver;
+            this.btnSalirCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSalirCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirCompras.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirCompras.Location = new System.Drawing.Point(18, 344);
             this.btnSalirCompras.Name = "btnSalirCompras";
             this.btnSalirCompras.Size = new System.Drawing.Size(75, 23);
             this.btnSalirCompras.TabIndex = 2;
             this.btnSalirCompras.Text = "Salir";
-            this.btnSalirCompras.UseVisualStyleBackColor = true;
+            this.btnSalirCompras.UseVisualStyleBackColor = false;
             this.btnSalirCompras.Click += new System.EventHandler(this.btnSalirCompras_Click);
             // 
             // FormVerCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(660, 379);
             this.Controls.Add(this.btnSalirCompras);
             this.Controls.Add(this.listBoxMisCompras);
             this.Controls.Add(this.label1);

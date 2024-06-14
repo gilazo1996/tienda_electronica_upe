@@ -51,9 +51,10 @@ namespace TC_Electrodomesticos
             // lblTextoAltaProd
             // 
             this.lblTextoAltaProd.AutoSize = true;
+            this.lblTextoAltaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextoAltaProd.Location = new System.Drawing.Point(21, 18);
             this.lblTextoAltaProd.Name = "lblTextoAltaProd";
-            this.lblTextoAltaProd.Size = new System.Drawing.Size(175, 13);
+            this.lblTextoAltaProd.Size = new System.Drawing.Size(199, 13);
             this.lblTextoAltaProd.TabIndex = 0;
             this.lblTextoAltaProd.Text = "REGISTRAR NUEVO PRODUCTO";
             // 
@@ -164,38 +165,48 @@ namespace TC_Electrodomesticos
             // 
             // btnCancelarRegistro
             // 
+            this.btnCancelarRegistro.BackColor = System.Drawing.Color.Silver;
+            this.btnCancelarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarRegistro.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarRegistro.Location = new System.Drawing.Point(268, 236);
             this.btnCancelarRegistro.Name = "btnCancelarRegistro";
             this.btnCancelarRegistro.Size = new System.Drawing.Size(75, 31);
             this.btnCancelarRegistro.TabIndex = 14;
             this.btnCancelarRegistro.Text = "Cancelar";
-            this.btnCancelarRegistro.UseVisualStyleBackColor = true;
+            this.btnCancelarRegistro.UseVisualStyleBackColor = false;
             this.btnCancelarRegistro.Click += new System.EventHandler(this.btnCancelarRegistro_Click);
             // 
             // btnRegistrarProd
             // 
+            this.btnRegistrarProd.BackColor = System.Drawing.Color.Silver;
+            this.btnRegistrarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarProd.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarProd.Location = new System.Drawing.Point(268, 132);
             this.btnRegistrarProd.Name = "btnRegistrarProd";
             this.btnRegistrarProd.Size = new System.Drawing.Size(75, 39);
             this.btnRegistrarProd.TabIndex = 15;
             this.btnRegistrarProd.Text = "Registrar producto";
-            this.btnRegistrarProd.UseVisualStyleBackColor = true;
+            this.btnRegistrarProd.UseVisualStyleBackColor = false;
             this.btnRegistrarProd.Click += new System.EventHandler(this.btnRegistrarProd_Click);
             // 
             // btnLimpiarCampos
             // 
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.Silver;
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCampos.Location = new System.Drawing.Point(268, 181);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(75, 45);
             this.btnLimpiarCampos.TabIndex = 16;
             this.btnLimpiarCampos.Text = "Limpiar campos";
-            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // FormAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(364, 288);
             this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.btnRegistrarProd);

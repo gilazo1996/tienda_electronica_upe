@@ -81,22 +81,30 @@
             // 
             // btnComprarPro
             // 
+            this.btnComprarPro.BackColor = System.Drawing.Color.Silver;
+            this.btnComprarPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnComprarPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprarPro.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprarPro.Location = new System.Drawing.Point(467, 404);
             this.btnComprarPro.Name = "btnComprarPro";
             this.btnComprarPro.Size = new System.Drawing.Size(75, 23);
             this.btnComprarPro.TabIndex = 4;
             this.btnComprarPro.Text = "Comprar";
-            this.btnComprarPro.UseVisualStyleBackColor = true;
+            this.btnComprarPro.UseVisualStyleBackColor = false;
             this.btnComprarPro.Click += new System.EventHandler(this.btnComprarPro_Click);
             // 
             // btnCancelarPro
             // 
+            this.btnCancelarPro.BackColor = System.Drawing.Color.Silver;
+            this.btnCancelarPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelarPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarPro.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarPro.Location = new System.Drawing.Point(607, 404);
             this.btnCancelarPro.Name = "btnCancelarPro";
             this.btnCancelarPro.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarPro.TabIndex = 5;
             this.btnCancelarPro.Text = "Cancelar";
-            this.btnCancelarPro.UseVisualStyleBackColor = true;
+            this.btnCancelarPro.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -134,7 +142,9 @@
             // 
             // btnAñadirAlCarrito
             // 
-            this.btnAñadirAlCarrito.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAñadirAlCarrito.BackColor = System.Drawing.Color.Silver;
+            this.btnAñadirAlCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirAlCarrito.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirAlCarrito.Location = new System.Drawing.Point(118, 273);
             this.btnAñadirAlCarrito.Name = "btnAñadirAlCarrito";
             this.btnAñadirAlCarrito.Size = new System.Drawing.Size(95, 23);
@@ -145,8 +155,10 @@
             // 
             // btnEliminarProducto
             // 
-            this.btnEliminarProducto.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.Silver;
             this.btnEliminarProducto.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEliminarProducto.Location = new System.Drawing.Point(236, 273);
             this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(0);

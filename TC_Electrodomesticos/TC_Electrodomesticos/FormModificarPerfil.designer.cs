@@ -49,7 +49,7 @@
             this.registerNombre.AutoSize = true;
             this.registerNombre.Location = new System.Drawing.Point(198, 101);
             this.registerNombre.Name = "registerNombre";
-            this.registerNombre.Size = new System.Drawing.Size(44, 13);
+            this.registerNombre.Size = new System.Drawing.Size(46, 13);
             this.registerNombre.TabIndex = 26;
             this.registerNombre.Text = "Nombre";
             // 
@@ -57,7 +57,7 @@
             // 
             this.tboxNombreModi.Location = new System.Drawing.Point(91, 98);
             this.tboxNombreModi.Name = "tboxNombreModi";
-            this.tboxNombreModi.Size = new System.Drawing.Size(100, 20);
+            this.tboxNombreModi.Size = new System.Drawing.Size(100, 21);
             this.tboxNombreModi.TabIndex = 25;
             // 
             // registerPssw
@@ -65,7 +65,7 @@
             this.registerPssw.AutoSize = true;
             this.registerPssw.Location = new System.Drawing.Point(198, 157);
             this.registerPssw.Name = "registerPssw";
-            this.registerPssw.Size = new System.Drawing.Size(61, 13);
+            this.registerPssw.Size = new System.Drawing.Size(59, 13);
             this.registerPssw.TabIndex = 24;
             this.registerPssw.Text = "Contraseña";
             // 
@@ -74,7 +74,7 @@
             this.registerMail.AutoSize = true;
             this.registerMail.Location = new System.Drawing.Point(198, 127);
             this.registerMail.Name = "registerMail";
-            this.registerMail.Size = new System.Drawing.Size(38, 13);
+            this.registerMail.Size = new System.Drawing.Size(39, 13);
             this.registerMail.TabIndex = 23;
             this.registerMail.Text = "Correo";
             // 
@@ -82,7 +82,7 @@
             // 
             this.tboxPSSWModi.Location = new System.Drawing.Point(91, 154);
             this.tboxPSSWModi.Name = "tboxPSSWModi";
-            this.tboxPSSWModi.Size = new System.Drawing.Size(100, 20);
+            this.tboxPSSWModi.Size = new System.Drawing.Size(100, 21);
             this.tboxPSSWModi.TabIndex = 22;
             this.tboxPSSWModi.UseSystemPasswordChar = true;
             // 
@@ -90,27 +90,33 @@
             // 
             this.tboxCorreoModi.Location = new System.Drawing.Point(91, 124);
             this.tboxCorreoModi.Name = "tboxCorreoModi";
-            this.tboxCorreoModi.Size = new System.Drawing.Size(100, 20);
+            this.tboxCorreoModi.Size = new System.Drawing.Size(100, 21);
             this.tboxCorreoModi.TabIndex = 21;
             // 
             // bModificarPerfil
             // 
+            this.bModificarPerfil.BackColor = System.Drawing.Color.Silver;
+            this.bModificarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bModificarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bModificarPerfil.Location = new System.Drawing.Point(43, 255);
             this.bModificarPerfil.Name = "bModificarPerfil";
             this.bModificarPerfil.Size = new System.Drawing.Size(75, 23);
             this.bModificarPerfil.TabIndex = 27;
             this.bModificarPerfil.Text = "Aceptar";
-            this.bModificarPerfil.UseVisualStyleBackColor = true;
+            this.bModificarPerfil.UseVisualStyleBackColor = false;
             this.bModificarPerfil.Click += new System.EventHandler(this.bModificarPerfil_Click);
             // 
             // bCancelarModificacion
             // 
+            this.bCancelarModificacion.BackColor = System.Drawing.Color.Silver;
+            this.bCancelarModificacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bCancelarModificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCancelarModificacion.Location = new System.Drawing.Point(201, 255);
             this.bCancelarModificacion.Name = "bCancelarModificacion";
             this.bCancelarModificacion.Size = new System.Drawing.Size(75, 23);
             this.bCancelarModificacion.TabIndex = 28;
             this.bCancelarModificacion.Text = "Cancelar";
-            this.bCancelarModificacion.UseVisualStyleBackColor = true;
+            this.bCancelarModificacion.UseVisualStyleBackColor = false;
             this.bCancelarModificacion.Click += new System.EventHandler(this.bCancelarModificacion_Click);
             // 
             // label1
@@ -150,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(316, 304);
             this.Controls.Add(this.pMostrarContra);
             this.Controls.Add(this.pOcultarContra);
@@ -162,6 +169,7 @@
             this.Controls.Add(this.registerMail);
             this.Controls.Add(this.tboxPSSWModi);
             this.Controls.Add(this.tboxCorreoModi);
+            this.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormModificarPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Perfil";

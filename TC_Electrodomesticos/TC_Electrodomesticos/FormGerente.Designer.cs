@@ -45,40 +45,51 @@
             // 
             // bListaClientes
             // 
+            this.bListaClientes.BackColor = System.Drawing.Color.Silver;
+            this.bListaClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bListaClientes.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bListaClientes.Location = new System.Drawing.Point(566, 58);
             this.bListaClientes.Name = "bListaClientes";
             this.bListaClientes.Size = new System.Drawing.Size(96, 23);
             this.bListaClientes.TabIndex = 0;
             this.bListaClientes.Text = "Lista de Clientes";
-            this.bListaClientes.UseVisualStyleBackColor = true;
+            this.bListaClientes.UseVisualStyleBackColor = false;
             this.bListaClientes.Click += new System.EventHandler(this.bListaClientes_Click);
             // 
             // bVerFacturas
             // 
+            this.bVerFacturas.BackColor = System.Drawing.Color.Silver;
+            this.bVerFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bVerFacturas.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVerFacturas.Location = new System.Drawing.Point(430, 58);
             this.bVerFacturas.Name = "bVerFacturas";
             this.bVerFacturas.Size = new System.Drawing.Size(91, 23);
             this.bVerFacturas.TabIndex = 1;
             this.bVerFacturas.Text = "Ver Facturas";
-            this.bVerFacturas.UseVisualStyleBackColor = true;
+            this.bVerFacturas.UseVisualStyleBackColor = false;
             this.bVerFacturas.Click += new System.EventHandler(this.bVerFacturas_Click);
             // 
             // bSalirGerente
             // 
+            this.bSalirGerente.BackColor = System.Drawing.Color.Silver;
+            this.bSalirGerente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bSalirGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSalirGerente.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSalirGerente.Location = new System.Drawing.Point(630, 281);
             this.bSalirGerente.Name = "bSalirGerente";
             this.bSalirGerente.Size = new System.Drawing.Size(75, 23);
             this.bSalirGerente.TabIndex = 2;
             this.bSalirGerente.Text = "Salir";
-            this.bSalirGerente.UseVisualStyleBackColor = true;
+            this.bSalirGerente.UseVisualStyleBackColor = false;
             this.bSalirGerente.Click += new System.EventHandler(this.bSalirGerente_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(293, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "INTERFAZ GERENTE";
             // 
@@ -102,12 +113,15 @@
             // 
             // bBuscarFacturaGere
             // 
+            this.bBuscarFacturaGere.BackColor = System.Drawing.Color.Silver;
+            this.bBuscarFacturaGere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBuscarFacturaGere.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscarFacturaGere.Location = new System.Drawing.Point(285, 57);
             this.bBuscarFacturaGere.Name = "bBuscarFacturaGere";
             this.bBuscarFacturaGere.Size = new System.Drawing.Size(91, 23);
             this.bBuscarFacturaGere.TabIndex = 7;
             this.bBuscarFacturaGere.Text = "Buscar Factura";
-            this.bBuscarFacturaGere.UseVisualStyleBackColor = true;
+            this.bBuscarFacturaGere.UseVisualStyleBackColor = false;
             this.bBuscarFacturaGere.Click += new System.EventHandler(this.button1_Click);
             // 
             // dFechaFactura
@@ -140,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(717, 316);
             this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.lFacturasGerente);

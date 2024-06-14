@@ -51,9 +51,10 @@
             // lblTituloControlStock
             // 
             this.lblTituloControlStock.AutoSize = true;
+            this.lblTituloControlStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloControlStock.Location = new System.Drawing.Point(25, 19);
             this.lblTituloControlStock.Name = "lblTituloControlStock";
-            this.lblTituloControlStock.Size = new System.Drawing.Size(206, 13);
+            this.lblTituloControlStock.Size = new System.Drawing.Size(235, 13);
             this.lblTituloControlStock.TabIndex = 0;
             this.lblTituloControlStock.Text = "CONTROL DE STOCK POR PRODUCTO";
             // 
@@ -69,12 +70,16 @@
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.Color.Silver;
+            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(511, 359);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 38);
             this.btnAtras.TabIndex = 2;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // gboxValoresStock
@@ -210,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(608, 418);
             this.Controls.Add(this.gboxValoresStock);
             this.Controls.Add(this.btnAtras);

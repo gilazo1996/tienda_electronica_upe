@@ -72,12 +72,15 @@
             // 
             // btnVerBuscarUser
             // 
+            this.btnVerBuscarUser.BackColor = System.Drawing.Color.Silver;
+            this.btnVerBuscarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerBuscarUser.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerBuscarUser.Location = new System.Drawing.Point(266, 12);
             this.btnVerBuscarUser.Name = "btnVerBuscarUser";
             this.btnVerBuscarUser.Size = new System.Drawing.Size(151, 23);
             this.btnVerBuscarUser.TabIndex = 3;
             this.btnVerBuscarUser.Text = "Buscar Usuario";
-            this.btnVerBuscarUser.UseVisualStyleBackColor = true;
+            this.btnVerBuscarUser.UseVisualStyleBackColor = false;
             this.btnVerBuscarUser.Click += new System.EventHandler(this.btnVerBuscarUser_Click);
             // 
             // labelNombreUserBuscar
@@ -100,42 +103,57 @@
             // 
             // btnVerListaUsers
             // 
+            this.btnVerListaUsers.BackColor = System.Drawing.Color.Silver;
+            this.btnVerListaUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerListaUsers.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerListaUsers.Location = new System.Drawing.Point(436, 13);
             this.btnVerListaUsers.Name = "btnVerListaUsers";
             this.btnVerListaUsers.Size = new System.Drawing.Size(151, 22);
             this.btnVerListaUsers.TabIndex = 6;
             this.btnVerListaUsers.Text = "Ver todos los usuarios";
-            this.btnVerListaUsers.UseVisualStyleBackColor = true;
+            this.btnVerListaUsers.UseVisualStyleBackColor = false;
             this.btnVerListaUsers.Click += new System.EventHandler(this.btnVerListaUsers_Click);
             // 
             // btnBlockUser
             // 
+            this.btnBlockUser.BackColor = System.Drawing.Color.Silver;
+            this.btnBlockUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBlockUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBlockUser.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBlockUser.Location = new System.Drawing.Point(12, 304);
             this.btnBlockUser.Name = "btnBlockUser";
             this.btnBlockUser.Size = new System.Drawing.Size(130, 23);
             this.btnBlockUser.TabIndex = 7;
             this.btnBlockUser.Text = "Bloquear Usuario";
-            this.btnBlockUser.UseVisualStyleBackColor = true;
+            this.btnBlockUser.UseVisualStyleBackColor = false;
             this.btnBlockUser.Click += new System.EventHandler(this.btnBlockUser_Click);
             // 
             // btnUnlockUser
             // 
+            this.btnUnlockUser.BackColor = System.Drawing.Color.Silver;
+            this.btnUnlockUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUnlockUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnlockUser.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUnlockUser.Location = new System.Drawing.Point(148, 304);
             this.btnUnlockUser.Name = "btnUnlockUser";
             this.btnUnlockUser.Size = new System.Drawing.Size(141, 23);
             this.btnUnlockUser.TabIndex = 8;
             this.btnUnlockUser.Text = "Desbloquear Usuario";
-            this.btnUnlockUser.UseVisualStyleBackColor = true;
+            this.btnUnlockUser.UseVisualStyleBackColor = false;
             this.btnUnlockUser.Click += new System.EventHandler(this.btnUnlockUser_Click);
             // 
             // btnCerrarBuscar
             // 
+            this.btnCerrarBuscar.BackColor = System.Drawing.Color.Silver;
+            this.btnCerrarBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCerrarBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarBuscar.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarBuscar.Location = new System.Drawing.Point(498, 303);
             this.btnCerrarBuscar.Name = "btnCerrarBuscar";
             this.btnCerrarBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrarBuscar.TabIndex = 9;
             this.btnCerrarBuscar.Text = "Cerrar";
-            this.btnCerrarBuscar.UseVisualStyleBackColor = true;
+            this.btnCerrarBuscar.UseVisualStyleBackColor = false;
             this.btnCerrarBuscar.Click += new System.EventHandler(this.btnCerrarBuscar_Click);
             // 
             // labelBuscarExplicacion
@@ -151,6 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(614, 350);
             this.Controls.Add(this.labelBuscarExplicacion);
             this.Controls.Add(this.btnCerrarBuscar);

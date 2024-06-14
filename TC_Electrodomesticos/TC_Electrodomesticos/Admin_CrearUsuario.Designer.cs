@@ -60,22 +60,29 @@
             // 
             // btnCerrarForm
             // 
-            this.btnCerrarForm.Location = new System.Drawing.Point(229, 251);
+            this.btnCerrarForm.BackColor = System.Drawing.Color.Silver;
+            this.btnCerrarForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCerrarForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarForm.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarForm.Location = new System.Drawing.Point(200, 251);
             this.btnCerrarForm.Name = "btnCerrarForm";
             this.btnCerrarForm.Size = new System.Drawing.Size(75, 23);
             this.btnCerrarForm.TabIndex = 18;
             this.btnCerrarForm.Text = "Cancelar";
-            this.btnCerrarForm.UseVisualStyleBackColor = true;
+            this.btnCerrarForm.UseVisualStyleBackColor = false;
             this.btnCerrarForm.Click += new System.EventHandler(this.btnCerrarForm_Click);
             // 
             // btnCrearUsuario
             // 
-            this.btnCrearUsuario.Location = new System.Drawing.Point(12, 251);
+            this.btnCrearUsuario.BackColor = System.Drawing.Color.Silver;
+            this.btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearUsuario.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearUsuario.Location = new System.Drawing.Point(25, 251);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
             this.btnCrearUsuario.Size = new System.Drawing.Size(107, 23);
             this.btnCrearUsuario.TabIndex = 17;
             this.btnCrearUsuario.Text = "Crear Usuario";
-            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.UseVisualStyleBackColor = false;
             this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
             // registerPssw
@@ -151,6 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(316, 304);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelCrearUser);

@@ -18,7 +18,9 @@ namespace TC_Electrodomesticos
         public InterfazMain()
         {
             InitializeComponent();
-            tboxPassword.PasswordChar = '*';
+        
+            tboxPassword.UseSystemPasswordChar = true;
+            //tboxPassword.PasswordChar = '';
 
         }
 
@@ -116,9 +118,18 @@ namespace TC_Electrodomesticos
 
         }
 
-        private void InterfazMain_Load(object sender, EventArgs e)
+        private void pMostrarContra_Click_1(object sender, EventArgs e)
         {
+            pOcultarContra.BringToFront();
+            //tboxPSSWModi.PasswordChar = '\0';
+            tboxPassword.UseSystemPasswordChar = false;
+        }
 
+        private void pOcultarContra_Click_1(object sender, EventArgs e)
+        {
+            pMostrarContra.BringToFront();
+            //tboxPSSWModi.PasswordChar = '';
+            tboxPassword.UseSystemPasswordChar = true;
         }
 
 

@@ -48,30 +48,37 @@ namespace TC_Electrodomesticos
             // lblTituloListaProd
             // 
             this.lblTituloListaProd.AutoSize = true;
-            this.lblTituloListaProd.Location = new System.Drawing.Point(18, 19);
+            this.lblTituloListaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloListaProd.Location = new System.Drawing.Point(18, 22);
             this.lblTituloListaProd.Name = "lblTituloListaProd";
-            this.lblTituloListaProd.Size = new System.Drawing.Size(126, 13);
+            this.lblTituloListaProd.Size = new System.Drawing.Size(144, 13);
             this.lblTituloListaProd.TabIndex = 1;
             this.lblTituloListaProd.Text = "LISTA DE PRODUCTOS";
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.Color.Silver;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(512, 330);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 38);
             this.btnAtras.TabIndex = 3;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnEliminarProd
             // 
+            this.btnEliminarProd.BackColor = System.Drawing.Color.Silver;
+            this.btnEliminarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProd.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProd.Location = new System.Drawing.Point(412, 330);
             this.btnEliminarProd.Name = "btnEliminarProd";
             this.btnEliminarProd.Size = new System.Drawing.Size(94, 38);
             this.btnEliminarProd.TabIndex = 5;
             this.btnEliminarProd.Text = "Eliminar producto";
-            this.btnEliminarProd.UseVisualStyleBackColor = true;
+            this.btnEliminarProd.UseVisualStyleBackColor = false;
             this.btnEliminarProd.Click += new System.EventHandler(this.btnEliminarProd_Click);
             // 
             // tboxIdProd
@@ -85,6 +92,7 @@ namespace TC_Electrodomesticos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(608, 418);
             this.Controls.Add(this.tboxIdProd);
             this.Controls.Add(this.btnEliminarProd);

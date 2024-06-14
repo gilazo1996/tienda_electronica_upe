@@ -52,32 +52,44 @@
             // 
             // admSalir
             // 
+            this.admSalir.BackColor = System.Drawing.Color.Silver;
+            this.admSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.admSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.admSalir.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admSalir.Location = new System.Drawing.Point(157, 254);
             this.admSalir.Name = "admSalir";
             this.admSalir.Size = new System.Drawing.Size(75, 23);
             this.admSalir.TabIndex = 1;
             this.admSalir.Text = "Salir";
-            this.admSalir.UseVisualStyleBackColor = true;
+            this.admSalir.UseVisualStyleBackColor = false;
             this.admSalir.Click += new System.EventHandler(this.admSalir_Click);
             // 
             // btnCrearUser
             // 
-            this.btnCrearUser.Location = new System.Drawing.Point(52, 121);
+            this.btnCrearUser.BackColor = System.Drawing.Color.Silver;
+            this.btnCrearUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCrearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearUser.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearUser.Location = new System.Drawing.Point(52, 109);
             this.btnCrearUser.Name = "btnCrearUser";
             this.btnCrearUser.Size = new System.Drawing.Size(149, 23);
             this.btnCrearUser.TabIndex = 2;
             this.btnCrearUser.Text = "CREAR USUARIO";
-            this.btnCrearUser.UseVisualStyleBackColor = true;
+            this.btnCrearUser.UseVisualStyleBackColor = false;
             this.btnCrearUser.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // btnBuscarUsuario
             // 
+            this.btnBuscarUsuario.BackColor = System.Drawing.Color.Silver;
+            this.btnBuscarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarUsuario.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarUsuario.Location = new System.Drawing.Point(52, 150);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
             this.btnBuscarUsuario.Size = new System.Drawing.Size(149, 23);
             this.btnBuscarUsuario.TabIndex = 4;
             this.btnBuscarUsuario.Text = "BUSCAR USUARIOS";
-            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
             this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // pictureBox1
@@ -105,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(244, 289);
             this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.btnBuscarUsuario);
