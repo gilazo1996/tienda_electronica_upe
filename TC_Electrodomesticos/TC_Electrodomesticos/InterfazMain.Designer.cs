@@ -150,6 +150,7 @@
             this.Controls.Add(this.tboxUsername);
             this.Controls.Add(this.pictureBox1);
             this.Name = "InterfazMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.InterfazMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

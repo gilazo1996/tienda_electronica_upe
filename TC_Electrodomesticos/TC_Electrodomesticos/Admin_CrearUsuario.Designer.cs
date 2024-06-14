@@ -165,6 +165,7 @@
             this.Controls.Add(this.tboxPSSWCrear);
             this.Controls.Add(this.tboxCorreoCrear);
             this.Name = "Admin_CrearUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_CrearUsuario";
             this.ResumeLayout(false);
             this.PerformLayout();

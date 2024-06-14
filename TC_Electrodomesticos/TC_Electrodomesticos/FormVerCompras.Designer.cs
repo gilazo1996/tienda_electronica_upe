@@ -71,6 +71,7 @@
             this.Controls.Add(this.listBoxMisCompras);
             this.Controls.Add(this.label1);
             this.Name = "FormVerCompras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver mis compras";
             this.ResumeLayout(false);
             this.PerformLayout();

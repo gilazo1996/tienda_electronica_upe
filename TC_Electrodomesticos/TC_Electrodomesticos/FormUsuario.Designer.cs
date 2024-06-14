@@ -84,6 +84,7 @@
             this.Controls.Add(this.btnClienteSalir);
             this.Controls.Add(this.textCliente);
             this.Name = "FormUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCliente";
             this.Load += new System.EventHandler(this.FormCliente_Load);
             this.ResumeLayout(false);

@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGrillaProductos);
             this.Name = "VerProductosForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGrilla";
             this.Load += new System.EventHandler(this.FormGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrillaProductos)).EndInit();

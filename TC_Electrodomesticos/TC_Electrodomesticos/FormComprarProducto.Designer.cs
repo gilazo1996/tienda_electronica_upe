@@ -225,6 +225,7 @@
             this.Controls.Add(this.tboxNombreCompleto);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "FormComprarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormComprarProducto";
             this.Load += new System.EventHandler(this.FormComprarProducto_Load);
             this.ResumeLayout(false);

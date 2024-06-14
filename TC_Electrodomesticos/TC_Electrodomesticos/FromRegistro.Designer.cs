@@ -150,6 +150,7 @@
             this.Controls.Add(this.tboxRegisterMail);
             this.Controls.Add(this.tboxRegisterName);
             this.Name = "FromRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.FromRegistro_Load);
             this.ResumeLayout(false);

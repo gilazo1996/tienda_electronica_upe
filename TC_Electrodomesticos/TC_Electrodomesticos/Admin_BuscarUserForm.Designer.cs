@@ -163,6 +163,7 @@
             this.Controls.Add(this.tboxUserNameBuscar);
             this.Controls.Add(this.dataGridUsuarios);
             this.Name = "Admin_BuscarUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_BuscarUserForm";
             this.Load += new System.EventHandler(this.Admin_BuscarUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuarios)).EndInit();
