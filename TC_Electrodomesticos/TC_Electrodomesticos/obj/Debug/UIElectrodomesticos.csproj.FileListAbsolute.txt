@@ -139,3 +139,7 @@ C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormBuscarProducto.resources
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormVerInventario.resources
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\UIElectrodomesticos.csproj.CopyComplete
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormAltaProducto.resources
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormBuscarProducto.resources
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormModificarPerfil.resources
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\TC_Electrodomesticos\obj\Debug\TC_Electrodomesticos.FormVerInventario.resources

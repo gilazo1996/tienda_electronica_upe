@@ -10,3 +10,9 @@ C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.dll
 C:\Users\Gastón Antonio Roa\Desktop\TECNICAS24\5. Proyecto\repositorio oficial\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.pdb
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\bin\Debug\BE.dll
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\bin\Debug\BE.pdb
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.dll
+C:\Users\megaf\Desktop\TP_Final\tienda_electronica_upe\TC_Electrodomesticos\BE\obj\Debug\BE.pdb

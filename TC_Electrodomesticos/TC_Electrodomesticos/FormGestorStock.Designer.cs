@@ -34,6 +34,7 @@
             this.btnGStockVerStock = new System.Windows.Forms.Button();
             this.btnGStockSalir = new System.Windows.Forms.Button();
             this.tboxGestorStock = new System.Windows.Forms.Label();
+            this.lModifiPerfil = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnGStockBuscarProd
@@ -95,11 +96,23 @@
             this.tboxGestorStock.TabIndex = 8;
             this.tboxGestorStock.Text = "BIENVENIDO, ESTA ES LA INTERFAZ DE GESTOR DE STOCK";
             // 
+            // lModifiPerfil
+            // 
+            this.lModifiPerfil.AutoSize = true;
+            this.lModifiPerfil.Location = new System.Drawing.Point(12, 263);
+            this.lModifiPerfil.Name = "lModifiPerfil";
+            this.lModifiPerfil.Size = new System.Drawing.Size(76, 13);
+            this.lModifiPerfil.TabIndex = 11;
+            this.lModifiPerfil.TabStop = true;
+            this.lModifiPerfil.Text = "Modificar Perfil";
+            this.lModifiPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lModifiPerfil_LinkClicked);
+            // 
             // FormGestorStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 288);
+            this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.tboxGestorStock);
             this.Controls.Add(this.btnGStockSalir);
             this.Controls.Add(this.btnGStockVerStock);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Button btnGStockVerStock;
         private System.Windows.Forms.Button btnGStockSalir;
         private System.Windows.Forms.Label tboxGestorStock;
+        private System.Windows.Forms.LinkLabel lModifiPerfil;
     }
 }

@@ -47,5 +47,11 @@ namespace TC_Electrodomesticos
             FormBuscarProducto formularioBuscarProd = new FormBuscarProducto(this);
             formularioBuscarProd.ShowDialog();
         }
+
+        private void lModifiPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormModificarPerfil modiperfil = new FormModificarPerfil();
+            modiperfil.ShowDialog();
+        }
     }
 }

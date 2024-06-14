@@ -123,5 +123,11 @@ namespace TC_Electrodomesticos
                 MessageBox.Show("No hay Ventas registradas en el sistema");
             }
         }
+
+        private void lModifiPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormModificarPerfil modiperfil = new FormModificarPerfil();
+            modiperfil.ShowDialog();
+        }
     }
 }

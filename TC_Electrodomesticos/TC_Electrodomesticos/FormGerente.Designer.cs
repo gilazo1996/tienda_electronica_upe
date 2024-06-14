@@ -39,6 +39,7 @@
             this.bBuscarFacturaGere = new System.Windows.Forms.Button();
             this.dFechaFactura = new System.Windows.Forms.DateTimePicker();
             this.lFacturasGerente = new System.Windows.Forms.ListBox();
+            this.lModifiPerfil = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dListaGerente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,11 +125,23 @@
             this.lFacturasGerente.Size = new System.Drawing.Size(583, 147);
             this.lFacturasGerente.TabIndex = 9;
             // 
+            // lModifiPerfil
+            // 
+            this.lModifiPerfil.AutoSize = true;
+            this.lModifiPerfil.Location = new System.Drawing.Point(38, 291);
+            this.lModifiPerfil.Name = "lModifiPerfil";
+            this.lModifiPerfil.Size = new System.Drawing.Size(76, 13);
+            this.lModifiPerfil.TabIndex = 10;
+            this.lModifiPerfil.TabStop = true;
+            this.lModifiPerfil.Text = "Modificar Perfil";
+            this.lModifiPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lModifiPerfil_LinkClicked);
+            // 
             // FormGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 316);
+            this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.lFacturasGerente);
             this.Controls.Add(this.dFechaFactura);
             this.Controls.Add(this.bBuscarFacturaGere);
@@ -159,5 +172,6 @@
         private System.Windows.Forms.Button bBuscarFacturaGere;
         private System.Windows.Forms.DateTimePicker dFechaFactura;
         private System.Windows.Forms.ListBox lFacturasGerente;
+        private System.Windows.Forms.LinkLabel lModifiPerfil;
     }
 }

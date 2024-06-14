@@ -428,5 +428,40 @@ namespace DAL
 
         }
 
+        public DataTable UsuarioActual(int idUsuario)
+        {
+            //Conexion objConexion = new Conexion();
+            //DataTable user;
+            string sqlvisualizarfacturas = $"select * from usuarios where usuarios.id={idUsuario}";
+
+            DataTable user = objConexion.LeerPorComando(sqlvisualizarfacturas);
+
+            return user;
+        }
+
+        public bool ModificarUsuari(int isuario, string nombre, string mail, string pass)
+        {
+
+            try
+            {
+                Conexion objConexion = new Conexion();
+                objConexion.Conectar();
+                string sqlQuery = $"UPDATE usuarios SET nombre = @nombre, email = @mail, password = @pass WHERE id = @IdUsuario";
+                SqlParameter[] parametros = new SqlParameter[]
+                {
+                    new SqlParameter("@nombre", nombre),
+                    new SqlParameter("@mail", mail),
+                    new SqlParameter("@pass", pass),
+                    new SqlParameter("@IdUsuario", isuario)
+                };
+                return objConexion.EscribirPorComando(sqlQuery, parametros) > 0;
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+                return false;
+            }
+        }
     }
 }

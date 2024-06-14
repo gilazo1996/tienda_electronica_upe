@@ -34,6 +34,7 @@
             this.btnCrearUser = new System.Windows.Forms.Button();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lModifiPerfil = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,23 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // lModifiPerfil
+            // 
+            this.lModifiPerfil.AutoSize = true;
+            this.lModifiPerfil.Location = new System.Drawing.Point(12, 259);
+            this.lModifiPerfil.Name = "lModifiPerfil";
+            this.lModifiPerfil.Size = new System.Drawing.Size(76, 13);
+            this.lModifiPerfil.TabIndex = 11;
+            this.lModifiPerfil.TabStop = true;
+            this.lModifiPerfil.Text = "Modificar Perfil";
+            this.lModifiPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lModifiPerfil_LinkClicked);
+            // 
             // FormularioAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(244, 289);
+            this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.btnBuscarUsuario);
             this.Controls.Add(this.btnCrearUser);
             this.Controls.Add(this.admSalir);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.Button btnCrearUser;
         private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lModifiPerfil;
     }
 }

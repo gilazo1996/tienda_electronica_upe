@@ -44,5 +44,11 @@ namespace TC_Electrodomesticos
             Admin_CrearUsuario formCrearUser = new Admin_CrearUsuario();
             formCrearUser.ShowDialog();
         }
+
+        private void lModifiPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormModificarPerfil modiperfil = new FormModificarPerfil();
+            modiperfil.ShowDialog();
+        }
     }
 }

@@ -57,5 +57,11 @@ namespace TC_Electrodomesticos
 
             }
         }
+
+        private void lModifiPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormModificarPerfil modiperfil = new FormModificarPerfil();
+            modiperfil.ShowDialog();
+        }
     }
 }

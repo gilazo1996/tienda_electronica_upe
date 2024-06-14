@@ -94,6 +94,12 @@
     <Compile Include="FormGestorStock.designer.cs">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarPerfil.designer.cs">
+      <DependentUpon>FormModificarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVerCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestorStock.resx">
       <DependentUpon>FormGestorStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarPerfil.resx">
+      <DependentUpon>FormModificarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerCompras.resx">
       <DependentUpon>FormVerCompras.cs</DependentUpon>

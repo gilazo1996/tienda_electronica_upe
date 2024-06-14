@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,34 @@ namespace BLL
         public int ObtenerIdUsuarioPorEmail(string email)
         {
             return _usuarioDAL.ObtenerIdUsuarioPorEmail(email);
+        }
+
+        public DataTable UsuarioActual(int idUsuario)
+        {
+            return _usuarioDAL.UsuarioActual(idUsuario);
+        }
+
+        public bool ModificarUsuari(int idUsuario, string nombre, string mail, string pass, out string mensaje)
+        {
+            try
+            {
+                bool resultado = _usuarioDAL.ModificarUsuari(idUsuario, nombre, mail, pass);
+                if (resultado)
+                {
+                    mensaje = "Usuario modificado con éxito.";
+                    return true;
+                }
+                else
+                {
+                    mensaje = "Error al modificar el usuario.";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+                return false;
+            }
         }
     }
 }

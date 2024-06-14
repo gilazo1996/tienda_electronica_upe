@@ -32,6 +32,7 @@
             this.btnClienteSalir = new System.Windows.Forms.Button();
             this.btnUsuarioComprar = new System.Windows.Forms.Button();
             this.btnVerCompras = new System.Windows.Forms.Button();
+            this.lModifiPerfil = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // textCliente
@@ -74,11 +75,23 @@
             this.btnVerCompras.UseVisualStyleBackColor = true;
             this.btnVerCompras.Click += new System.EventHandler(this.btnVerCompras_Click);
             // 
+            // lModifiPerfil
+            // 
+            this.lModifiPerfil.AutoSize = true;
+            this.lModifiPerfil.Location = new System.Drawing.Point(12, 237);
+            this.lModifiPerfil.Name = "lModifiPerfil";
+            this.lModifiPerfil.Size = new System.Drawing.Size(76, 13);
+            this.lModifiPerfil.TabIndex = 11;
+            this.lModifiPerfil.TabStop = true;
+            this.lModifiPerfil.Text = "Modificar Perfil";
+            this.lModifiPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lModifiPerfil_LinkClicked);
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 288);
+            this.Controls.Add(this.lModifiPerfil);
             this.Controls.Add(this.btnVerCompras);
             this.Controls.Add(this.btnUsuarioComprar);
             this.Controls.Add(this.btnClienteSalir);
@@ -98,5 +111,6 @@
         private System.Windows.Forms.Button btnClienteSalir;
         private System.Windows.Forms.Button btnUsuarioComprar;
         private System.Windows.Forms.Button btnVerCompras;
+        private System.Windows.Forms.LinkLabel lModifiPerfil;
     }
 }
