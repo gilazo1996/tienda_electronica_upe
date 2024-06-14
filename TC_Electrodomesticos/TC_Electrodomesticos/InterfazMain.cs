@@ -26,71 +26,80 @@ namespace TC_Electrodomesticos
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string username = tboxUsername.Text;
-            string password = tboxPassword.Text;
 
-
-
-            LoginUsuario login = new LoginUsuario();// creo una instancia de la clase Login
-            UsuarioBLL usuarios = new UsuarioBLL();
-            // invoco método de inicio de sesión de la clase Login
-            bool loginSuccessful = login.IniciarSesion(username, password);
-
-            if (loginSuccessful)
+            try
             {
-                // Obtener el ID de usuario
-                int idUsuario = usuarios.ObtenerIdUsuarioPorEmail(username); //invoco al metodo para obtener el id mediante el mail del user
 
-                //invoco el metodo para obtener los permisos del user, con esto muestro por pantalla
-                List<string> permisosUsuario = Permisos.ObtenerRoles(idUsuario);
+                string username = tboxUsername.Text;
+                string password = tboxPassword.Text;
 
-                if (permisosUsuario.Contains("administrador"))
+
+
+                LoginUsuario login = new LoginUsuario();// creo una instancia de la clase Login
+                UsuarioBLL usuarios = new UsuarioBLL();
+                // invoco método de inicio de sesión de la clase Login
+                bool loginSuccessful = login.IniciarSesion(username, password);
+
+                if (loginSuccessful)
                 {
-                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es administrador.");
-                    // abro la interfaz de administrador
-                    FormularioAdministrador formularioAdmin = new FormularioAdministrador();
-                    formularioAdmin.ShowDialog();
+                    // Obtener el ID de usuario
+                    int idUsuario = usuarios.ObtenerIdUsuarioPorEmail(username); //invoco al metodo para obtener el id mediante el mail del user
 
-                    // cierro el formulario de inicio de sesión
-                    //this.Hide();
+                    //invoco el metodo para obtener los permisos del user, con esto muestro por pantalla
+                    List<string> permisosUsuario = Permisos.ObtenerRoles(idUsuario);
+
+                    if (permisosUsuario.Contains("administrador"))
+                    {
+                        MessageBox.Show("Inicio de Sesión exitoso. El usuario es administrador.");
+                        // abro la interfaz de administrador
+                        FormularioAdministrador formularioAdmin = new FormularioAdministrador();
+                        formularioAdmin.ShowDialog();
+
+                        // cierro el formulario de inicio de sesión
+                        //this.Hide();
+                    }
+                    if (permisosUsuario.Contains("usuario"))
+                    {
+                        MessageBox.Show("Inicio de Sesión exitoso. Bienvenido!.");
+
+                        //abro interfaz de usuario
+                        FormUsuario formularioUsuario = new FormUsuario();
+                        formularioUsuario.ShowDialog();
+                        // cierro el formulario de inicio de sesión
+                        //this.Hide();
+                    }
+
+                    //INICIO CODIGO ROA
+                    if (permisosUsuario.Contains("gestorStock"))
+                    {
+                        MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gestor de Stock.");
+
+                        //abro interfaz de usuario
+                        FormGestorStock formularioGestorStock = new FormGestorStock();
+                        formularioGestorStock.ShowDialog();
+                        // cierro el formulario de inicio de sesión
+                        //this.Hide();
+                    }//FIN CODIGO ROA
+
+                    //Gestion de Gerente
+                    if (permisosUsuario.Contains("gerente"))
+                    {
+                        MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gerente.");
+
+                        FormGerente formulariogerente = new FormGerente();
+                        formulariogerente.ShowDialog();
+
+                        //this.Hide();
+                    }
                 }
-                if(permisosUsuario.Contains("usuario"))
+                else
                 {
-                    MessageBox.Show("Inicio de Sesión exitoso. Bienvenido!.");
-
-                    //abro interfaz de usuario
-                    FormUsuario formularioUsuario = new FormUsuario();
-                    formularioUsuario.ShowDialog();
-                    // cierro el formulario de inicio de sesión
-                    //this.Hide();
-                }
-
-                //INICIO CODIGO ROA
-                if (permisosUsuario.Contains("gestorStock"))
-                {
-                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gestor de Stock.");
-
-                    //abro interfaz de usuario
-                    FormGestorStock formularioGestorStock = new FormGestorStock();
-                    formularioGestorStock.ShowDialog();
-                    // cierro el formulario de inicio de sesión
-                    //this.Hide();
-                }//FIN CODIGO ROA
-
-                //Gestion de Gerente
-                if (permisosUsuario.Contains("gerente"))
-                {
-                    MessageBox.Show("Inicio de Sesión exitoso. El usuario es Gerente.");
-
-                    FormGerente formulariogerente = new FormGerente();
-                    formulariogerente.ShowDialog();
-
-                    //this.Hide();
+                    MessageBox.Show("Inicio de sesión fallido. Verifica tu usuario y contraseña.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Inicio de sesión fallido. Verifica tu usuario y contraseña.");
+                MessageBox.Show("Error al conectar la base de datos: " + ex.Message);
             }
         }
 

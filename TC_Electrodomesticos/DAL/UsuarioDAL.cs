@@ -19,6 +19,17 @@ namespace DAL
         {
             try
             {
+                // Validación de nombre y contraseña
+                if (string.IsNullOrWhiteSpace(nombre))
+                {
+                    throw new ArgumentException("El nombre no puede estar vacío.");
+                }
+
+                if (string.IsNullOrWhiteSpace(password))
+                {
+
+                    throw new ArgumentException("La contraseña no puede estar vacía.");
+                }
 
                 if (verificarExiste.UsuarioExiste(email))
                 {
@@ -28,22 +39,22 @@ namespace DAL
                 string sqlInsertUsuario = "INSERT INTO usuarios (nombre, email, password) VALUES (@Nombre, @Email, @Password)";
                 SqlParameter[] parametrosInsertUsuario = new SqlParameter[]
                 {
-                    new SqlParameter("@Nombre", nombre), //los parametros de cada campo de la tabla son asignados a los valores recibidos del metodo
-                    new SqlParameter("@Email", email),
-                    new SqlParameter("@Password", password)
+            new SqlParameter("@Nombre", nombre), //los parametros de cada campo de la tabla son asignados a los valores recibidos del metodo
+            new SqlParameter("@Email", email),
+            new SqlParameter("@Password", password)
                 };
 
                 int filasAfectadasUsuario = objConexion.EscribirPorComando(sqlInsertUsuario, parametrosInsertUsuario);
 
                 if (filasAfectadasUsuario > 0)
                 {
-                    int idUsuario = ObtenerIdUsuarioPorEmail(email); //Si se pudo ingresar un usuario, entonces en la tabla roles usuarios tambien debo ingresar el rol del usuario
+                    int idUsuario = ObtenerIdUsuarioPorEmail(email); //si se pudo ingresar un usuario, entonces en la tabla roles usuarios tambien debo ingresar el rol del usuario
 
                     string sqlInsertRolUsuario = "INSERT INTO roles_usuarios (id_rol, id_usuario) VALUES (@IdRol, @IdUsuario)";
                     SqlParameter[] parametrosInsertRolUsuario = new SqlParameter[]
                     {
-                        new SqlParameter("@IdRol", ObtenerIdRolUsuario()),
-                        new SqlParameter("@IdUsuario", idUsuario)
+                new SqlParameter("@IdRol", ObtenerIdRolUsuario()),
+                new SqlParameter("@IdUsuario", idUsuario)
                     };
 
                     int filasAfectadasRolUsuario = objConexion.EscribirPorComando(sqlInsertRolUsuario, parametrosInsertRolUsuario);
@@ -53,9 +64,13 @@ namespace DAL
 
                 return false;
             }
-            catch (Exception ex) //manejo de excepciones generales
+            catch (ArgumentException argEx) // manejo de excepciones de validación
             {
-                throw ex;
+                return false;
+            }
+            catch (Exception ex) // manejo de excepciones generales
+            {
+                return false;
             }
         }
 
