@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		Imagenes\tienda.jpg = Imagenes\tienda.jpg
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorTienda", "InstaladorTienda\InstaladorTienda.vdproj", "{FB2B9F12-A80B-47DC-A320-4F03BEBDF432}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorFinal", "InstaladorFinal\InstaladorFinal.vdproj", "{2779F839-7675-433A-B85D-A459D96C526C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,8 +40,8 @@ Global
 		{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C74E55C-E7FF-43CF-A377-1DBBE65361E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB2B9F12-A80B-47DC-A320-4F03BEBDF432}.Debug|Any CPU.ActiveCfg = Debug
-		{FB2B9F12-A80B-47DC-A320-4F03BEBDF432}.Release|Any CPU.ActiveCfg = Release
+		{2779F839-7675-433A-B85D-A459D96C526C}.Debug|Any CPU.ActiveCfg = Debug
+		{2779F839-7675-433A-B85D-A459D96C526C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
